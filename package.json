@@ -1,0 +1,19 @@
+{
+  "name": "czajbrary",
+  "version": "1.0.0",
+  "description": "It's a page showing all my books and you will be able to rent a book",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "SET NODE_ENV=production && nodemon server.js"
+  },
+  "author": "Wiktor Czajkowski",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.10",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  }
+}
