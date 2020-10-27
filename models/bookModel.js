@@ -3,68 +3,84 @@ const slugify = require('slugify');
 const validator = require('validator');
 
 const bookSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: [true, 'A book need a title!'],
-        unique: true,
-        trim: true
-    },
-    slug: String,
-    author: {
-        type: String,
-        required: [true, 'A book need a author'],
-        trim: true
-    },
-    genre: {
-        type: String,
-        required: [true, 'A book need a genre'],
-        trim: true
-    },
-    language: {
-        type: String,
-        required: [true, 'Which language of a book'],
-        trim: true
-    },
-    year: {
-        type: Number,
-        required: [true, 'A book need a year of production']
-    },
-    read: {
-        type: String,
-        enum: {
-            values: ['yes', 'no'],
-            message: 'Do you read? YES or NO'
+        title: {
+            type: String,
+            required: [true, 'A book need a title!'],
+            unique: true,
+            trim: true
+        },
+        slug: String,
+        author: {
+            type: String,
+            required: [true, 'A book need a author'],
+            trim: true
+        },
+        genre: {
+            type: String,
+            required: [true, 'A book need a genre'],
+            trim: true
+        },
+        language: {
+            type: String,
+            required: [true, 'Which language of a book'],
+            trim: true
+        },
+        year: {
+            type: Number,
+            required: [true, 'A book need a year of production']
+        },
+        read: {
+            type: String,
+            enum: {
+                values: ['yes', 'no'],
+                message: 'Do you read? YES or NO'
+            }
+            // required: [true, 'Do you read a book?']
+        },
+        imageCover: {
+            type: String,
+            required: [true, 'A book need a cover image']
+        },
+        description: {
+            type: String,
+            trim: true,
+            required: [true, 'A book need description']
+        },
+        ratingsAverage: {
+            type: Number,
+            default: 4,
+            min: [1, 'Rating must be above 1'],
+            max: [5, 'Rating must be below or equal 5']
+        },
+        ratingsQuantity: {
+            type: Number,
+            default: 0
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now(),
+            select: false
+        },
+        price: {
+            type: Number,
+            default: 10
         }
-        // required: [true, 'Do you read a book?']
     },
-    imageCover: {
-        type: String,
-        required: [true, 'A book need a cover image']
-    },
-    description: {
-        type: String,
-        trim: true,
-        required: [true, 'A book need description']
-    },
-    ratingsAverage: {
-        type: Number,
-        default: 4,
-        min: [1, 'Rating must be above 1'],
-        max: [5, 'Rating must be below or equal 5']
-    },
-    ratingsQuantity: {
-        type: Number,
-        default: 0
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now(),
-        select: false
-    },
-    price: {
-        type: Number,
-        default: 10
+    {
+        toJSON: {virtuals: true},
+        toObject: {virtuals: true}
     }
+);
+
+// bookSchema.index({year: 1});
+bookSchema.index({ ratingsAverage: -1 });
+bookSchema.index({ slug: 1 });
+
+//virtual populate
+bookSchema.virtual('reviews', {
+    ref: 'Review',
+    foreignField: 'book',
+    localField: '_id'
 });
 
 //Document middleware
