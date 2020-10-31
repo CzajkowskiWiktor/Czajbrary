@@ -43,11 +43,15 @@ reviewSchema.pre(/^find/, function(next) {
         select: 'name photo'
     });
 
+    // this.populate({
+    //     path: 'user',
+    //     select: 'name photo'
+    // });
+
     next();
 });
 
 reviewSchema.statics.calcAverageRatings = async function(bookId) {
-    console.log(bookId);
     const stats = await this.aggregate([
         {
             $match: {book: bookId}
@@ -61,32 +65,35 @@ reviewSchema.statics.calcAverageRatings = async function(bookId) {
         }
     ]);
     console.log(stats);
+    console.log(stats[0].nRating);
 
-    await Book.findByIdAndUpdate(bookId, {
-        ratingsQuantity: stats[0].nRating,
-        ratingsAverage: stats[0].avgRating
-    });
+    if(stats.length > 0) {
+        await Book.findByIdAndUpdate(bookId, {
+            ratingsQuantity: stats[0].nRating,
+            ratingsAverage: stats[0].avgRating
+        });
+    } else {
+        await Book.findByIdAndUpdate(bookId, {
+            ratingsQuantity: 0,
+            ratingsAverage: 4
+        });
+    }
 };
 
-reviewSchema.post('save', async function() {
+reviewSchema.post('save', function() {
     //this points to current review
-    await this.constructor.calcAverageRatings(this.book);
+    this.constructor.calcAverageRatings(this.book);
 });
 
 reviewSchema.pre(/^findOneAnd/, async function(next) {
-    this.rev = await this.findOne();
-    console.log(this.rev);
+    this.r = await this.findOne();
+    console.log(this.r);
     next();
 });
 
 reviewSchema.post(/^findOneAnd/, async function() {
-    await this.rev.constructor.calcAverageRatings(this.rev.book);
+    await this.r.constructor.calcAverageRatings(this.r.book._id);
 });
-
-// reviewSchema.post(/^findOneAnd/, async function(doc, next) {
-//     await doc.constructor.calcAverageRatings(doc.book);
-//     next();
-// });
 
 const Review = mongoose.model('Review', reviewSchema);
 
