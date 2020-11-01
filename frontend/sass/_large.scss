@@ -1,0 +1,29 @@
+@media(min-width: 992px) {
+    .section-title {
+        font-size: 4.2rem;
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header {
+        background-image: url('./../img/bookcase-1869616_1920.jpg');
+    }
+
+    .nav-desktop {
+        display: flex;
+    }
+
+    .books {
+        &__card {
+            margin-bottom: 4em;
+            width: 30%;
+        }
+    }
+
+}

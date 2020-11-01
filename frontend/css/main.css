@@ -1,0 +1,649 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+
+.white-block-left {
+  bottom: 0;
+  left: -50px;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+.white-block-right {
+  top: 0;
+  right: -50px;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+.btn-special-animation {
+  position: relative;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-special-animation::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  z-index: -1;
+}
+
+.btn-special-animation:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.section-padding {
+  padding: 5em 2em;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  font-size: 3.5rem;
+  color: #fff;
+  z-index: 1000;
+}
+
+.burger-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: '';
+  background-color: #fff;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.burger-btn__bars {
+  width: 100%;
+}
+
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  background-color: #1a1a1a;
+  z-index: 100;
+}
+
+.nav-mobile--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-mobile .nav__item {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 1em 2em;
+  font-size: 2.6rem;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.nav-mobile .nav__item:last-child {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1755e7;
+  font-size: 3rem;
+}
+
+.nav-mobile .nav__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  content: '';
+}
+
+.nav-mobile .nav__item:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+@-webkit-keyframes navItemsAnim {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navItemsAnim {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav-items-anim {
+  -webkit-animation: navItemsAnim 1s both;
+          animation: navItemsAnim 1s both;
+}
+
+.nav-desktop {
+  display: none;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background-color: #1a1a1a;
+  padding: 1em;
+  z-index: 1;
+}
+
+.nav-desktop .nav__logo {
+  font-size: 3rem;
+  color: #fff;
+  margin-left: 1em;
+}
+
+.nav-desktop .nav__ref-item, .nav-desktop .nav__ref-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  font-size: 1.7rem;
+}
+
+.nav-desktop .nav__ref-item {
+  color: #fff;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.nav-desktop .nav__ref-item:hover {
+  color: #1755e7;
+}
+
+.nav-desktop .nav__ref-btn {
+  margin-right: 1.5em;
+  background-color: #fff;
+  color: #1a1a1a;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.nav-desktop .nav__ref-btn:hover {
+  background-color: #adadad;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  height: 85vh;
+  text-align: center;
+  color: #fff;
+  background-image: url("./../img/bookcase-1869616_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.header__title {
+  font-family: 'Grenze Gotisch', cursive;
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.header__text {
+  font-size: 1.5rem;
+}
+
+.header__btn {
+  margin-top: 1.5em;
+  padding: 0.6em 1.2em;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #232323;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header__btn::before {
+  background-color: #adadad;
+}
+
+.header-shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.books__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.books__card {
+  position: relative;
+  margin: 1em 0;
+  height: 450px;
+  max-width: 350px;
+  color: #fff;
+  text-align: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  visibility: hidden;
+}
+
+.books__card:hover .books__card-img {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.books__card:hover .books__card-info {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+.books__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, black 0%, rgba(0, 0, 0, 0.349877) 100%, #001eff 100%), url("./../img/ttoat.jpg");
+  background-size: 350px 450px;
+  background-repeat: no-repeat;
+  background-position: top;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.books__card-img-title {
+  font-size: 2.3rem;
+}
+
+.books__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.6rem;
+}
+
+.books__card-img-info i {
+  margin-right: 0.3em;
+}
+
+.books__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: linear-gradient(45deg, black 0%, rgba(0, 0, 0, 0.349877) 100%, #001eff 100%);
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.books__card-info-title, .books__card-info-btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.books__card-info-title {
+  top: 1.2em;
+  font-family: 'Grenze Gotisch', cursive;
+  font-size: 3rem;
+}
+
+.books__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+
+.books__card-info-list-item {
+  padding: 1em;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #fff;
+}
+
+.books__card-info-list-item:first-child {
+  margin-top: 2em;
+}
+
+.books__card-info-list-item:last-child {
+  border-bottom: none;
+}
+
+.books__card-info-btn {
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  width: 50%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.books__card-info-btn::before {
+  background-color: #adadad;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.footer .wrapper {
+  padding: 4em 2em 2em;
+}
+
+.footer__box {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.footer__box-desktop {
+  display: none;
+}
+
+.footer__box-title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.footer__box-social {
+  margin: 2em 0 1em;
+}
+
+.footer__box-link {
+  padding: 0 .3em;
+  font-size: 3.5rem;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.footer__box-link:first-child {
+  padding-left: 0;
+}
+
+.footer__box-link:hover {
+  color: #1755e7;
+}
+
+.footer__bottom-text {
+  padding: 2em;
+  text-align: center;
+}
+
+@media (min-width: 568px) {
+  .header {
+    background-image: url("./../img/bookcase-1869616_1280.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3.6rem;
+  }
+  .section-padding {
+    padding: 7em 2em;
+  }
+  .white-block {
+    height: 40px;
+    width: 45%;
+  }
+  .header {
+    height: 75vh;
+  }
+  .header__title {
+    font-size: 7rem;
+  }
+  .header__text {
+    font-size: 2.2rem;
+  }
+  .header__btn {
+    font-size: 1.6rem;
+  }
+  .books__card {
+    margin: 1em;
+    margin-bottom: 3em;
+    width: 45%;
+  }
+  .footer__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__box-desktop {
+    display: block;
+  }
+  .footer__box {
+    margin: 0 2em;
+    width: 40%;
+  }
+  .footer__box:first-child {
+    width: 50%;
+  }
+  .footer__box-title {
+    font-size: 2.4rem;
+  }
+  .footer__box-list {
+    list-style: none;
+  }
+  .footer__box-list-item {
+    margin-bottom: 1em;
+  }
+  .footer__box-list-item a {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+  }
+  .footer__box-list-item a:hover {
+    color: #fff;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 4.2rem;
+  }
+  .burger-btn {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .header {
+    background-image: url("./../img/bookcase-1869616_1920.jpg");
+  }
+  .nav-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .books__card {
+    margin-bottom: 4em;
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
