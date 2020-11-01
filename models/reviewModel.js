@@ -34,6 +34,8 @@ const reviewSchema = new mongoose.Schema({
     }
 );
 
+reviewSchema.index({ book: 1, user: 1 }, { unique: true });
+
 reviewSchema.pre(/^find/, function(next) {
     this.populate({
         path: 'book',
@@ -42,11 +44,6 @@ reviewSchema.pre(/^find/, function(next) {
         path: 'user',
         select: 'name photo'
     });
-
-    // this.populate({
-    //     path: 'user',
-    //     select: 'name photo'
-    // });
 
     next();
 });
@@ -65,9 +62,9 @@ reviewSchema.statics.calcAverageRatings = async function(bookId) {
         }
     ]);
     console.log(stats);
-    console.log(stats[0].nRating);
+    console.log(stats.length);
 
-    if(stats.length > 0) {
+    if(stats.length >= 1) {
         await Book.findByIdAndUpdate(bookId, {
             ratingsQuantity: stats[0].nRating,
             ratingsAverage: stats[0].avgRating

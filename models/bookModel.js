@@ -50,7 +50,8 @@ const bookSchema = new mongoose.Schema({
             type: Number,
             default: 4,
             min: [1, 'Rating must be above 1'],
-            max: [5, 'Rating must be below or equal 5']
+            max: [5, 'Rating must be below or equal 5'],
+            set: val => Math.round(val * 10) / 10
         },
         ratingsQuantity: {
             type: Number,
