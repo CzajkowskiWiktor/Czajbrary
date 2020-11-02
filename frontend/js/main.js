@@ -1,4 +1,5 @@
 const nav = document.querySelector('.nav-mobile');
+const logoBtn = document.querySelector('.logo');
 const navBtn = document.querySelector('.burger-btn');
 const allNavItems = document.querySelectorAll('.nav__item');
 const footerYear = document.querySelector('.footer__year');
@@ -31,3 +32,6 @@ const currentYear = () => {
 currentYear();
 
 navBtn.addEventListener('click', handleNav);
+logoBtn.addEventListener('click', () => {
+    nav.classList.remove('nav-mobile--active');
+});
