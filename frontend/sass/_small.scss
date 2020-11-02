@@ -1,5 +1,21 @@
+@media(min-width: 540px) {
+    .signup {
+        min-height: 100vh;
+
+        .form__box {
+            width: 350px;
+
+            form {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
 @media(min-width: 568px) {
     .header {
         background-image: url('./../img/bookcase-1869616_1280.jpg');
     }
+
 }
+

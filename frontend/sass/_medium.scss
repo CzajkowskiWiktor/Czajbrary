@@ -78,4 +78,21 @@
             }
         }
     }
+
+    .signup {
+        .form__box {
+            width: 440px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            form {
+                font-size: 2rem;
+            }
+
+            .popup {
+                width: 500px;
+            }
+        }
+    }
 }

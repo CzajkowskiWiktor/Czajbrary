@@ -551,6 +551,162 @@ body {
   text-align: center;
 }
 
+.signup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 120vh;
+  background: linear-gradient(-45deg, black 0%, #747474 100%, #001eff 100%);
+  overflow: hidden;
+}
+
+.signup .form__box {
+  position: absolute;
+  width: 85%;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px #1a1a1a;
+          box-shadow: 0 0 20px #1a1a1a;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-radius: 8px;
+}
+
+.signup .form__box form {
+  padding: 2em;
+  font-size: 1.4rem;
+}
+
+.signup .form__box h1 {
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+
+.signup .form__box .form-box {
+  margin-bottom: 0.5em;
+}
+
+.signup .form__box .form-box label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.signup .form__box .form-box input {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1.6rem;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+}
+
+.signup .form__box .form-box.error input {
+  border: 1px solid #0089fa;
+  background-color: rgba(0, 137, 250, 0.1);
+}
+
+.signup .form__box .form-box .error-text {
+  margin: 5px 0 0 10px;
+  font-size: 1.4rem;
+  color: #0089fa;
+  visibility: hidden;
+}
+
+.signup .form__box .form-box.error .error-text {
+  visibility: visible;
+}
+
+.signup .form__box .control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.signup .form__box .send, .signup .form__box .clear, .signup .form__box .close {
+  display: block;
+  padding: 0.7em 0;
+  margin-left: 1em;
+  width: 100px;
+  font-size: 1.5rem;
+  background-color: #1755e7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.signup .form__box .send::before,
+.signup .form__box .clear::before,
+.signup .form__box .close::before {
+  background-color: #162dfd;
+}
+
+.signup .form__box .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: -700px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid black;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.signup .form__box .popup p {
+  font-size: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.signup .form__box .popup .close {
+  margin-top: 20px;
+}
+
+.signup .form__box .show-popup {
+  top: 150px;
+}
+
+@media (min-width: 540px) {
+  .signup {
+    min-height: 100vh;
+  }
+  .signup .form__box {
+    width: 350px;
+  }
+  .signup .form__box form {
+    font-size: 1.6rem;
+  }
+}
+
 @media (min-width: 568px) {
   .header {
     background-image: url("./../img/bookcase-1869616_1280.jpg");
@@ -621,6 +777,19 @@ body {
   .footer__box-list-item a:hover {
     color: #fff;
   }
+  .signup .form__box {
+    width: 440px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .signup .form__box form {
+    font-size: 2rem;
+  }
+  .signup .form__box .popup {
+    width: 500px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -644,6 +813,9 @@ body {
   .books__card {
     margin-bottom: 4em;
     width: 30%;
+  }
+  .signup {
+    min-height: 93vh;
   }
 }
 /*# sourceMappingURL=main.css.map */

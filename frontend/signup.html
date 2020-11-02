@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czajbrary - Sign Up</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b3ae74c84c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <button class="burger-btn singup">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+
+    <a href="#" class="logo"><i class="fab fa-dropbox"></i></a>
+
+    <nav class="nav nav-mobile">
+        <div class="nav__items">
+            <a href="#books" class="nav__item">Collection</a>
+            <a href="#login" class="nav__item">Log in</a>
+            <a href="#signin" class="nav__item">Sign in</a>
+        </div>
+    </nav>
+
+    <nav class="nav nav-desktop">
+        <a href="#" class="nav__logo"><i class="fab fa-dropbox"></i></a>
+        <div class="nav__ref">
+            <a href="#books" class="nav__ref-item">Collection</a>
+            <a href="#login" class="nav__ref-item">Log in</a>
+            <a href="#signin" class="nav__ref-btn btn-special-animation">Sign in</a>
+        </div>
+    </nav>
+
+    <section class="signup">
+        <div class="wrapper">
+            <div class="form__box">
+                <form>
+                    <h1>Create a New Account!</h1>
+
+                    <div class="form-box">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                        <p class="error-text">error</p>
+                    </div>
+                    <div class="form-box">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <p class="error-text">error</p>
+                    </div>
+                    <div class="form-box">
+                        <label for="password2">Confrim Password:</label>
+                        <input type="password" id="password2" placeholder="Confrim your password">
+                        <p class="error-text">error</p>
+                    </div>
+                    <div class="form-box">
+                        <label for="email">E-mail Address:</label>
+                        <input type="email" id="email" placeholder="Enter your e-mail">
+                        <p class="error-text">error</p>
+                    </div>
+
+                    <div class="control-buttons">
+                        <button class="clear btn-special-animation">Clear</button>
+                        <button class="send btn-special-animation">Send</button>
+                    </div>
+
+                    <div class="popup">
+                        <p>Signup Form has been successfully send!</p>
+                        <button class="close btn-special-animation">Close</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="./js/jquery.waypoints.min"></script>
+    <script src="./js/animation.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>
