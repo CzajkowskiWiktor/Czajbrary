@@ -6,32 +6,6 @@ const sendBtn = document.querySelector('.send');
 const clearBtn = document.querySelector('.clear');
 const popup = document.querySelector('.popup');
 const closeBtn = document.querySelector('.close');
-//nav-mobile
-const nav = document.querySelector('.nav-mobile');
-const logoBtn = document.querySelector('.logo');
-const navBtn = document.querySelector('.burger-btn');
-const allNavItems = document.querySelectorAll('.nav__item');
-
-const handleNav = () => {
-    nav.classList.toggle('nav-mobile--active');
-
-    allNavItems.forEach(item => {
-        item.addEventListener('click', () => {
-            nav.classList.remove('nav-mobile--active');
-        })
-    });
-    handleNavItemsAnim();
-};
-
-const handleNavItemsAnim = () => {
-    let delayTime = 0;
-
-    allNavItems.forEach(item => {
-        item.classList.toggle('nav-items-anim');
-        item.style.animationDelay = '.' + delayTime + 's';
-        delayTime++;
-    });
-};
 
 ////////////////////////////////////////////
 //////////////SIGNUP FORM///////////////////
@@ -121,9 +95,4 @@ clearBtn.addEventListener('click', e => {
 
 closeBtn.addEventListener('click', () => {
     popup.classList.remove('show-popup');
-});
-
-navBtn.addEventListener('click', handleNav);
-logoBtn.addEventListener('click', () => {
-    nav.classList.remove('nav-mobile--active');
 });
