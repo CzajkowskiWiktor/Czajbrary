@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/b3ae74c84c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -35,7 +36,7 @@
         <a href="./main.html" class="nav__logo"><i class="fab fa-dropbox"></i></a>
         <div class="nav__ref">
             <a href="./main.html" class="nav__ref-item">Collection</a>
-            <a href="#" class="nav__ref-item">Log in</a>
+            <a href="./login.html" class="nav__ref-item">Log in</a>
             <a href="./signup.html" class="nav__ref-btn btn-special-animation">Sign in</a>
         </div>
     </nav>
@@ -80,8 +81,167 @@
     </section>
 
     <section class="book-reviews section">
+        <div class="white-block white-block-left"></div>
         <div class="wrapper">
+            <h2 class="book-reviews__heading">Reviews</h2>
+            <div class="reviews__boxes">
+                <div class="reviews__box">
+                    <div class="reviews__box-img">
+                        <img src="./../dev-data/img/default.jpg" alt="Anna Nowak">
+                    </div>
+                    <div class="reviews__box-info">
+                        <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i> </div>
+                        <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Aspernatur voluptas velit dignissimos sint optio facilis nam unde exercitationem sunt
+                            voluptatibus?</p>
+                        <strong>Wiktor Czajowski</strong>
+                    </div>
+                    <div class="reviews__rating">
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--inactive">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews__box">
+                    <div class="reviews__box-img">
+                        <img src="./../dev-data/img/default.jpg" alt="Anna Nowak">
+                    </div>
+                    <div class="reviews__box-info">
+                        <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i> </div>
+                        <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Aspernatur voluptas velit dignissimos sint optio facilis nam unde exercitationem sunt
+                            voluptatibus?</p>
+                        <strong>Wiktor Czajowski</strong>
+                    </div>
+                    <div class="reviews__rating">
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--inactive">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews__box">
+                    <div class="reviews__box-img">
+                        <img src="./../dev-data/img/default.jpg" alt="Anna Nowak">
+                    </div>
+                    <div class="reviews__box-info">
+                        <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i> </div>
+                        <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Aspernatur voluptas velit dignissimos sint optio facilis nam unde exercitationem sunt
+                            voluptatibus?</p>
+                        <strong>Wiktor Czajowski</strong>
+                    </div>
+                    <div class="reviews__rating">
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--inactive">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews__box">
+                    <div class="reviews__box-img">
+                        <img src="./../dev-data/img/default.jpg" alt="Anna Nowak">
+                    </div>
+                    <div class="reviews__box-info">
+                        <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i> </div>
+                        <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Aspernatur voluptas velit dignissimos sint optio facilis nam unde exercitationem sunt
+                            voluptatibus?</p>
+                        <strong>Wiktor Czajowski</strong>
+                    </div>
+                    <div class="reviews__rating">
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--inactive">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews__box">
+                    <div class="reviews__box-img">
+                        <img src="./../dev-data/img/default.jpg" alt="Anna Nowak">
+                    </div>
+                    <div class="reviews__box-info">
+                        <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i> </div>
+                        <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Aspernatur voluptas velit dignissimos sint optio facilis nam unde exercitationem sunt
+                            voluptatibus?</p>
+                        <strong>Wiktor Czajowski</strong>
+                    </div>
+                    <div class="reviews__rating">
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                        <svg class="reviews__star reviews__star--active">
+                            <use xlink:href="img/icons.svg#icon-star"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="rent">
+        <div class="white-block white-block-left"></div>
+        <div class="wrapper">
+            <div class="rent-box">
+                <h2 class="rent-box__title">Would you like to read this book?</h2>
+                <p class="rent-box__text">For only 10$ you can rent that book for a month!</p>
+                <button class="rent-box__btn btn-special-animation">Rent a book!</button>
+            </div>
         </div>
     </section>
 
@@ -119,10 +279,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/jquery.waypoints.min"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/login.js"></script>
 </body>
 
 </html>

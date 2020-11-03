@@ -9,6 +9,7 @@
   height: 40px;
   width: 60%;
   background-color: #fff;
+  border: none;
 }
 
 .white-block-left {
@@ -494,6 +495,8 @@ body {
   width: 50%;
   border: none;
   background-color: #fff;
+  color: #1a1a1a;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -750,6 +753,8 @@ body {
 .book-description .book-box .book-description__box-info img {
   max-height: 400px;
   margin-bottom: 1.5em;
+  -webkit-box-shadow: 0 0 10px #1a1a1a;
+          box-shadow: 0 0 10px #1a1a1a;
 }
 
 .book-description .book-box .book-description__box-info li {
@@ -776,8 +781,163 @@ body {
 
 .book-reviews {
   position: relative;
-  height: 30vh;
+  min-height: 30vh;
   background-color: #232323;
+}
+
+.book-reviews__heading {
+  text-align: center;
+  padding: 2em 2em 1em 2em;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  margin-bottom: 10em;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px #1a1a1a;
+          box-shadow: 0 0 10px #1a1a1a;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.reviews__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #1755e7;
+}
+
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: #232323;
+}
+
+.reviews__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0.5rem;
+  margin-top: 2em;
+}
+
+.reviews__star {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5em;
+}
+
+.reviews__star--active {
+  fill: #1755e7;
+}
+
+.reviews__star--inactive {
+  fill: #bbb;
+}
+
+.rent {
+  position: relative;
+  min-height: 80vh;
+  padding: 2em;
+}
+
+.rent .white-block {
+  background-color: #1a1a1a;
+  width: 70%;
+}
+
+.rent-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  min-height: 200px;
+  max-height: 300px;
+  padding: 2em;
+  text-align: center;
+  background-color: #232323;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #1a1a1a;
+          box-shadow: 0 0 10px #1a1a1a;
+}
+
+.rent-box__title {
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+
+.rent-box__text {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
+.rent-box__btn {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 50%;
+  border: none;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rent-box__btn::before {
+  background-color: #adadad;
 }
 
 @media (min-width: 410px) {
@@ -801,6 +961,12 @@ body {
 @media (min-width: 568px) {
   .header {
     background-image: url("./../img/bookcase-1869616_1280.jpg");
+  }
+  .rent {
+    min-height: 60vh;
+  }
+  .rent-box {
+    width: 60%;
   }
 }
 
@@ -910,6 +1076,16 @@ body {
     font-size: 2.4rem;
     padding: 0 2.5em;
   }
+  .rent-box__title {
+    font-size: 2.6rem;
+  }
+  .rent-box__text {
+    font-size: 2.1rem;
+  }
+  .rent-box__btn {
+    max-width: 40%;
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -936,6 +1112,70 @@ body {
   }
   .signup {
     min-height: 93vh;
+  }
+  .book-header {
+    min-height: 50vh;
+  }
+  .book-header .book__title {
+    font-size: 6.5rem;
+    top: 40%;
+  }
+  .book-description {
+    min-height: 70vh;
+  }
+  .book-description .book-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .book-description .book-box .book-description__box-desc .book__title {
+    font-size: 3rem;
+  }
+  .book-description .book-box .book-description__box-desc .book__desc {
+    padding: 0 4em;
+  }
+  .rent {
+    height: 20vh;
+  }
+  .rent-box {
+    width: 50%;
+  }
+  .rent-box__title {
+    font-size: 3.2rem;
+  }
+  .rent-box__text {
+    font-size: 2.5rem;
+  }
+  .rent-box__btn {
+    min-width: 20%;
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rent {
+    height: 20vh;
+  }
+  .rent-box {
+    width: 800px;
+    padding: 3em;
+  }
+  .rent-box__title {
+    font-size: 3.2rem;
+  }
+  .rent-box__text {
+    font-size: 2.5rem;
+  }
+  .rent-box__btn {
+    min-width: 20%;
+    font-size: 2.3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

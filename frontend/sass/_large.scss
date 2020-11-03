@@ -30,4 +30,77 @@
         min-height: 93vh;
     }
 
+    .book-header {
+        min-height: 50vh;
+
+        .book__title {
+            font-size: 6.5rem;
+            top: 40%;
+        }
+    }
+
+    .book-description {
+        min-height: 70vh;
+        .book-box {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+
+            .book-description__box-desc {
+                .book__title {
+                    font-size: 3rem;
+                }
+
+                .book__desc {
+                    padding: 0 4em;
+                }
+            }
+        }
+    }
+
+    .rent {
+        height: 20vh;
+
+        &-box {
+            width: 50%;
+
+            &__title {
+                font-size: 3.2rem;
+            }
+
+            &__text {
+                font-size: 2.5rem;
+            }
+
+            &__btn {
+                min-width: 20%;
+                font-size: 2.3rem;
+            }
+        }
+    }
+
+}
+
+@media(min-width: 1200px) {
+    .rent {
+        height: 20vh;
+
+        &-box {
+            width: 800px;
+            padding: 3em;
+
+            &__title {
+                font-size: 3.2rem;
+            }
+
+            &__text {
+                font-size: 2.5rem;
+            }
+
+            &__btn {
+                min-width: 20%;
+                font-size: 2.3rem;
+            }
+        }
+    }
 }

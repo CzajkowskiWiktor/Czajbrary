@@ -23,5 +23,13 @@
         background-image: url('./../img/bookcase-1869616_1280.jpg');
     }
 
+    .rent {
+        min-height: 60vh;
+
+        &-box {
+            width: 60%;
+        }
+    }
+
 }
 

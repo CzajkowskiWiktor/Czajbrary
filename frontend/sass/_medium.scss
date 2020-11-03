@@ -138,4 +138,21 @@
 
         }
     }
+
+    .rent {
+        &-box {
+            &__title {
+                font-size: 2.6rem;
+            }
+
+            &__text {
+                font-size: 2.1rem;
+            }
+
+            &__btn {
+                max-width: 40%;
+                font-size: 2rem;
+            }
+        }
+    }
 }

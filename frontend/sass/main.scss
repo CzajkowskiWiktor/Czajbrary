@@ -372,6 +372,8 @@ body {
                 width: 50%;
                 border: none;
                 background-color: $white;
+                color: $darker;
+                text-decoration: none;
                 cursor: pointer;
 
                 &::before {
@@ -596,6 +598,7 @@ body {
             img {
                 max-height: 400px;
                 margin-bottom: 1.5em;
+                box-shadow: 0 0 10px $darker;
             }
 
             li {
@@ -625,10 +628,143 @@ body {
     }
 }
 
+//REVIEWS
 .book-reviews {
     position: relative;
-    height: 30vh;
+    min-height: 30vh;
     background-color: $dark;
+
+    &__heading {
+        text-align: center;
+        padding: 2em 2em 1em 2em;
+        font-size: 4rem;
+        color: $white;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+}
+
+.reviews {
+    &__box {
+        position: relative;
+        margin: 2em;
+        margin-bottom: 10em;
+        padding: 2em;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0 0 10px $darker;
+        transition: transform .3s;
+
+        &:hover {
+            transform: scale(0.95);
+        }
+    }
+    &__box-img {
+        position: absolute;
+        top: 8%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__box-quote {
+        margin-bottom: 1em;
+        font-size: 3rem;
+        color: $main-color;
+    }
+
+    &__box-text {
+        margin-bottom: 1em;
+        font-size: 1.4rem;
+        color: $dark;
+    }
+
+    &__rating {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        font-size: 0.5rem;
+        margin-top: 2em;
+    }
+
+    &__star {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 0.5em;
+    }
+
+    &__star--active {
+        fill: $main-color;
+    }
+
+    &__star--inactive {
+        fill: #bbb;
+    }
+}
+
+//renting a book
+.rent {
+    position: relative;
+    min-height: 80vh;
+    padding: 2em;
+
+    .white-block {
+        background-color: $darker;
+        width: 70%;
+    }
+
+    &-box {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        min-height: 200px;
+        max-height: 300px;
+        padding: 2em;
+        text-align: center;
+        background-color: $dark;
+        color: $white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px $darker;
+
+        &__title {
+            margin-bottom: 0.5em;
+            font-size: 2rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            margin-bottom: 0.5em;
+        }
+
+        &__btn {
+            margin-top: 0.5em;
+            padding: 0.5em;
+            border-radius: 10px;
+            width: 50%;
+            border: none;
+            background-color: $white;
+            color: $darker;
+            font-size: 1.6rem;
+            text-decoration: none;
+            cursor: pointer;
+
+            &::before {
+                background-color: rgb(173, 173, 173);
+            }
+        }
+    }
 }
 
 @import './small';
