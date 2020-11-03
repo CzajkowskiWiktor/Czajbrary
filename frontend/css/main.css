@@ -695,6 +695,97 @@ body {
   top: 150px;
 }
 
+.book-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+  background-color: #232323;
+}
+
+.book-header .book__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Grenze Gotisch', cursive;
+  text-align: center;
+  font-weight: normal;
+}
+
+.book-description {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.book-description .book-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book-description .book-box .book-description__box-info {
+  margin-bottom: 2em;
+}
+
+.book-description .book-box .book-description__box-info i {
+  font-size: 2rem;
+}
+
+.book-description .book-box .book-description__box-info img {
+  max-height: 400px;
+  margin-bottom: 1.5em;
+}
+
+.book-description .book-box .book-description__box-info li {
+  list-style: none;
+  text-align: center;
+  margin: 0.5em;
+  font-size: 1.6rem;
+}
+
+.book-description .book-box .book-description__box-info li span {
+  font-weight: bold;
+}
+
+.book-description .book-box .book-description__box-desc .book__title {
+  text-align: center;
+  margin-bottom: 0.7em;
+  font-size: 2rem;
+}
+
+.book-description .white-block {
+  width: 70%;
+  background-color: #232323;
+}
+
+.book-reviews {
+  position: relative;
+  height: 30vh;
+  background-color: #232323;
+}
+
+@media (min-width: 410px) {
+  .book-header {
+    min-height: 70vh;
+  }
+}
+
 @media (min-width: 540px) {
   .signup {
     min-height: 100vh;
@@ -789,6 +880,35 @@ body {
   }
   .signup .form__box .popup {
     width: 500px;
+  }
+  .book-header {
+    min-height: 60vh;
+  }
+  .book-header .book__title {
+    font-size: 5.5rem;
+  }
+  .book-description .book-box .book-description__box-info {
+    margin-bottom: 2.5em;
+  }
+  .book-description .book-box .book-description__box-info i {
+    font-size: 3rem;
+  }
+  .book-description .book-box .book-description__box-info img {
+    max-height: 600px;
+  }
+  .book-description .book-box .book-description__box-info li {
+    font-size: 2.2rem;
+  }
+  .book-description .book-box .book-description__box-desc {
+    margin-top: 1.7em;
+    margin-bottom: 3em;
+  }
+  .book-description .book-box .book-description__box-desc .book__title {
+    font-size: 2.8rem;
+  }
+  .book-description .book-box .book-description__box-desc .book__desc {
+    font-size: 2.4rem;
+    padding: 0 2.5em;
   }
 }
 

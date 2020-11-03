@@ -1,3 +1,9 @@
+@media(min-width: 410px) {
+    .book-header {
+        min-height: 70vh;
+    }
+}
+
 @media(min-width: 540px) {
     .signup {
         min-height: 100vh;

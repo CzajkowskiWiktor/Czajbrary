@@ -95,4 +95,47 @@
             }
         }
     }
+
+    .book-header {
+        min-height: 60vh;
+
+        .book__title {
+            font-size: 5.5rem;
+        }
+    }
+
+    .book-description {
+        .book-box {
+            .book-description__box-info {
+                margin-bottom: 2.5em;
+
+                i {
+                    font-size: 3rem;
+                }
+
+                img {
+                    max-height: 600px;
+                }
+
+                li {
+                    font-size: 2.2rem;
+                }
+            }
+
+            .book-description__box-desc {
+                margin-top: 1.7em;
+                margin-bottom: 3em;
+
+                .book__title {
+                    font-size: 2.8rem;
+                }
+
+                .book__desc {
+                    font-size: 2.4rem;
+                    padding: 0 2.5em;
+                }
+            }
+
+        }
+    }
 }

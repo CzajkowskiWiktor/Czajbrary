@@ -555,6 +555,82 @@ body {
     }
 }
 
+//BOOK
+.book-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: $dark;
+
+    .book__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 4rem;
+        font-family: 'Grenze Gotisch', cursive;
+        text-align: center;
+        font-weight: normal;
+    }
+}
+
+.book-description {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .book-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .book-description__box-info {
+            margin-bottom: 2em;
+
+            i {
+                font-size: 2rem;
+            }
+
+            img {
+                max-height: 400px;
+                margin-bottom: 1.5em;
+            }
+
+            li {
+                list-style: none;
+                text-align: center;
+                margin: 0.5em;
+                font-size: 1.6rem;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .book-description__box-desc {
+            // text-align: center;
+            .book__title {
+                text-align: center;
+                margin-bottom: 0.7em;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .white-block {
+        width: 70%;
+        background-color: $dark;
+    }
+}
+
+.book-reviews {
+    position: relative;
+    height: 30vh;
+    background-color: $dark;
+}
+
 @import './small';
 @import './medium';
 @import './large';

@@ -26,8 +26,8 @@
     <nav class="nav nav-mobile">
         <div class="nav__items">
             <a href="./main.html" class="nav__item">Collection</a>
-            <a href="./login.html" class="nav__item">Log in</a>
-            <a href="#" class="nav__item">Sign in</a>
+            <a href="#" class="nav__item">Log in</a>
+            <a href="./signup.html" class="nav__item">Sign in</a>
         </div>
     </nav>
 
@@ -35,50 +35,53 @@
         <a href="./main.html" class="nav__logo"><i class="fab fa-dropbox"></i></a>
         <div class="nav__ref">
             <a href="./main.html" class="nav__ref-item">Collection</a>
-            <a href="./login.html" class="nav__ref-item">Log in</a>
-            <a href="#" class="nav__ref-btn btn-special-animation">Sign in</a>
+            <a href="#" class="nav__ref-item">Log in</a>
+            <a href="./signup.html" class="nav__ref-btn btn-special-animation">Sign in</a>
         </div>
     </nav>
 
-    <section class="signup">
+    <section class="book-header section">
+        <div class="white-block white-block-left"></div>
         <div class="wrapper">
-            <div class="form__box">
-                <form>
-                    <h1>Create a New Account!</h1>
+            <h3 class="book__title">The taking of Anie Thorne</h3>
+        </div>
+    </section>
 
-                    <div class="form-box">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" placeholder="Enter your username">
-                        <p class="error-text">error</p>
-                    </div>
-                    <div class="form-box">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" placeholder="Enter your password">
-                        <p class="error-text">error</p>
-                    </div>
-                    <div class="form-box">
-                        <label for="password2">Confrim Password:</label>
-                        <input type="password" id="password2" placeholder="Confrim your password">
-                        <p class="error-text">error</p>
-                    </div>
-                    <div class="form-box">
-                        <label for="email">E-mail Address:</label>
-                        <input type="email" id="email" placeholder="Enter your e-mail">
-                        <p class="error-text">error</p>
-                    </div>
+    <section class="book-description section section-padding">
+        <div class="white-block white-block-left"></div>
+        <div class="wrapper">
+            <div class="book-box">
+                <div class="book-description__box-info book-description__box-info--right">
+                    <img src="./img/ttoat.jpg" alt="Book image">
+                    <ul>
+                        <li><i class="far fa-user"></i> <span>Author:</span> C.H Jone</li>
+                        <li><i class="fas fa-book"></i> <span>Genre:</span> Horror</li>
+                        <li><i class="far fa-calendar-alt"></i> <span>Year of prod:</span> 2017</li>
+                        <li><i class="fas fa-globe-europe"></i> <span>Language:</span> English</li>
+                        <li><i class="far fa-check-square"></i> <span>Read:</span> Yes</li>
+                        <li><i class="far fa-star"></i> <span>Rating:</span> 4.5</li>
+                    </ul>
 
-                    <div class="control-buttons">
-                        <button class="clear btn-special-animation">Clear</button>
-                        <button class="send btn-special-animation">Send</button>
-                    </div>
-
-                    <div class="popup">
-                        <p>Signup Form has been successfully send!</p>
-                        <button class="close btn-special-animation">Close</button>
-                    </div>
-
-                </form>
+                </div>
+                <div class="book-description__box-desc book-description__box-desc--right">
+                    <h3 class="book__title">Description</h3>
+                    <p class="book__desc">One night, Annie disappeared. There were searches, appeals. Everyone thought
+                        the
+                        worst. And then, after 48 hours, she came back. But she couldn't - or wouldn't - say what had
+                        happened to her. Something happened to my sister. I can't explain what. I just know that when
+                        she
+                        came back, she wasn't the same. She wasn't my Annie. I didn't want to admit, even to myself,
+                        that
+                        sometimes I was scared to death of my own little sister.</p>
+                </div>
             </div>
+
+        </div>
+    </section>
+
+    <section class="book-reviews section">
+        <div class="wrapper">
+
         </div>
     </section>
 
@@ -112,13 +115,14 @@
         <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Czajbrary by Wiktor Czajkowski </p>
     </footer>
 
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="./js/jquery.waypoints.min"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/signup.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
