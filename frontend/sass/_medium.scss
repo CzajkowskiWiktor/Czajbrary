@@ -13,6 +13,7 @@
         width: 45%;
     }
 
+
     .header {
         height: 75vh;
 
@@ -152,6 +153,77 @@
             &__btn {
                 max-width: 40%;
                 font-size: 2rem;
+            }
+        }
+    }
+
+    .setting {
+        padding: 1em 2em;
+
+        &-box {
+            margin-top: 8em;
+            // min-height: 70%;
+            min-width: 80%;
+            max-width: 90%;
+            padding: 2em;
+        }
+
+        &__menu {
+
+            i {
+                font-size: 3rem;
+            }
+        }
+
+        &__account {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $darker;
+
+            &-title {
+                font-size: 2.6rem;
+            }
+
+            form {
+                width: 80%;
+                padding: 2em;
+                font-size: 1.6rem;
+            }
+
+            .form-box {
+                font-size: 1.6rem;
+                margin-bottom: 0.7em;
+            }
+
+            .saveSett {
+                min-width: 30%;
+                font-size: 1.6rem;
+            }
+        }
+
+        &__passwordChange {
+
+            &-title {
+                font-size: 2.6rem;
+                margin-bottom: 1.2em;
+            }
+
+            form {
+                width: 80%;
+                padding: 2em;
+                font-size: 1.6rem;
+            }
+
+            .form-box {
+                font-size: 1.6rem;
+                margin-bottom: 0.7em;
+            }
+
+            .savePass {
+                min-width: 30%;
+                font-size: 1.6rem;
             }
         }
     }

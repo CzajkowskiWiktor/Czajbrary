@@ -16,6 +16,20 @@
             }
         }
     }
+
+    .setting {
+        &__account {
+            .saveSett {
+                width: 40%;
+            }
+        }
+
+        &__passwordChange {
+            .savePass {
+                width: 40%;
+            }
+        }
+    }
 }
 
 @media(min-width: 568px) {

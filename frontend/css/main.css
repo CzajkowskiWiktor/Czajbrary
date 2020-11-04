@@ -274,7 +274,7 @@ body {
   text-transform: uppercase;
   padding: 0.5em 1em;
   margin: 0.5em;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .nav-desktop .nav__ref-item {
@@ -942,22 +942,22 @@ body {
 
 .setting {
   position: relative;
-  height: 100vh;
-  padding: 10em 2em;
-  overflow: hidden;
+  min-height: 100vh;
+  padding: 0.5em;
   background: linear-gradient(-45deg, black 0%, #747474 100%, #001eff 100%);
 }
 
 .setting-box {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  margin-top: 7em;
+  margin-bottom: 4em;
+  top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  min-height: 70%;
-  min-width: 80%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  min-width: 90%;
   max-width: 90%;
-  padding: 2em;
+  padding: 0.5em;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px #1a1a1a;
           box-shadow: 0 0 10px #1a1a1a;
@@ -980,7 +980,7 @@ body {
 
 .setting__menu i {
   padding: 1em;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -1006,18 +1006,18 @@ body {
 
 .setting__account-title {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   margin-bottom: 1.2em;
 }
 
 .setting__account form {
   width: 100%;
-  padding: 2em;
-  font-size: 1.4rem;
+  padding: 1em;
+  font-size: 1.2rem;
 }
 
 .setting__account .form-box {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5em;
 }
 
@@ -1080,7 +1080,7 @@ body {
 .setting__account .saveSett {
   position: relative;
   right: 0;
-  margin-top: 1em;
+  margin-top: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1089,11 +1089,11 @@ body {
           justify-content: center;
   padding: 0.5em;
   border-radius: 10px;
-  width: 30%;
+  width: 50%;
   border: none;
   background-color: #232323;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1119,18 +1119,19 @@ body {
 
 .setting__passwordChange-title {
   text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 1.2em;
+  font-size: 2.2rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 
 .setting__passwordChange form {
   width: 100%;
-  padding: 2em;
-  font-size: 1.4rem;
+  padding: 0.5em;
+  font-size: 1.2rem;
 }
 
 .setting__passwordChange .form-box {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5em;
 }
 
@@ -1149,7 +1150,7 @@ body {
 }
 
 .setting__passwordChange .savePass {
-  margin-top: 1em;
+  margin-top: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,17 +1159,87 @@ body {
           justify-content: center;
   padding: 0.5em;
   border-radius: 10px;
-  width: 40%;
+  width: 50%;
   border: none;
   background-color: #232323;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: none;
   cursor: pointer;
 }
 
 .setting__passwordChange .savePass::before {
   background-color: black;
+}
+
+.setting-title {
+  text-align: center;
+  margin: 1em;
+  font-size: 2.6rem;
+}
+
+.setting__mybooks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 600px;
+}
+
+.setting__mybooks-card {
+  margin: 2em;
+  height: 400px;
+  min-width: 250px;
+  -webkit-box-shadow: 0 0 10px #1a1a1a;
+          box-shadow: 0 0 10px #1a1a1a;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.setting__mybooks-card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.setting__mybooks-card-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(45deg, black 0%, rgba(0, 0, 0, 0.349877) 100%, #001eff 100%), url("./../img/ttoat.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.setting__mybooks-card-img-title {
+  position: absolute;
+  top: 2em;
+  font-size: 2rem;
+}
+
+.setting__mybooks-card-img-info {
+  position: absolute;
+  bottom: 1em;
+  text-decoration: none;
+  z-index: 10;
+  padding: 1em;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.setting__mybooks-card-img-info:visited {
+  color: #fff;
 }
 
 @media (min-width: 410px) {
@@ -1186,6 +1257,12 @@ body {
   }
   .signup .form__box form {
     font-size: 1.6rem;
+  }
+  .setting__account .saveSett {
+    width: 40%;
+  }
+  .setting__passwordChange .savePass {
+    width: 40%;
   }
 }
 
@@ -1317,6 +1394,64 @@ body {
     max-width: 40%;
     font-size: 2rem;
   }
+  .setting {
+    padding: 1em 2em;
+  }
+  .setting-box {
+    margin-top: 8em;
+    min-width: 80%;
+    max-width: 90%;
+    padding: 2em;
+  }
+  .setting__menu i {
+    font-size: 3rem;
+  }
+  .setting__account {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #1a1a1a;
+  }
+  .setting__account-title {
+    font-size: 2.6rem;
+  }
+  .setting__account form {
+    width: 80%;
+    padding: 2em;
+    font-size: 1.6rem;
+  }
+  .setting__account .form-box {
+    font-size: 1.6rem;
+    margin-bottom: 0.7em;
+  }
+  .setting__account .saveSett {
+    min-width: 30%;
+    font-size: 1.6rem;
+  }
+  .setting__passwordChange-title {
+    font-size: 2.6rem;
+    margin-bottom: 1.2em;
+  }
+  .setting__passwordChange form {
+    width: 80%;
+    padding: 2em;
+    font-size: 1.6rem;
+  }
+  .setting__passwordChange .form-box {
+    font-size: 1.6rem;
+    margin-bottom: 0.7em;
+  }
+  .setting__passwordChange .savePass {
+    min-width: 30%;
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1342,7 +1477,7 @@ body {
     width: 30%;
   }
   .signup {
-    min-height: 93vh;
+    min-height: 94.5vh;
   }
   .book-header {
     min-height: 50vh;
@@ -1388,6 +1523,9 @@ body {
     min-width: 20%;
     font-size: 2.3rem;
   }
+  .setting-title {
+    font-size: 3.2rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1407,6 +1545,29 @@ body {
   .rent-box__btn {
     min-width: 20%;
     font-size: 2.3rem;
+  }
+  .setting-box {
+    margin-top: 6em;
+  }
+  .setting__account-title, .setting__passwordChange-title {
+    font-size: 3rem;
+  }
+  .setting__account .form-box input, .setting__passwordChange .form-box input {
+    font-size: 1.8rem;
+  }
+  .setting__account .form-box, .setting__passwordChange .form-box {
+    font-size: 2rem;
+  }
+  .setting__account .saveSett {
+    font-size: 1.8rem;
+    width: 30%;
+  }
+  .setting__passwordChange .savePass {
+    font-size: 1.8rem;
+    width: 30%;
+  }
+  .setting-title {
+    font-size: 3.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

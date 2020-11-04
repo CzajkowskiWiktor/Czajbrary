@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Czajbrary - Sign Up</title>
+    <title>Czajbrary - My Book's rent</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
@@ -46,51 +46,39 @@
         <div class="wrapper">
             <div class="setting-box">
                 <div class="setting__menu">
-                    <a href="#"><i class="fas fa-user-cog"></i></a>
-                    <a href="./bookrent.html"><i class="fas fa-book"></i></a>
+                    <a href="./setting.html"><i class="fas fa-user-cog"></i></a>
+                    <a href="#"><i class="fas fa-book"></i></a>
                     <a href="./myReviews.html"><i class="far fa-comment-dots"></i></a>
                 </div>
-                <div class="setting__account">
-                    <form>
-                        <h2 class="setting__account-title">Your Account Setting</h2>
-                        <div class="form-box">
-                            <label for="email">Name</label>
-                            <input type="email" id="email" placeholder="Your name">
+                <h2 class="setting-title">My rented Books</h2>
+                <div class="setting__mybooks">
+                    <div class="setting__mybooks-card">
+                        <div class="setting__mybooks-card-img">
+                            <h3 class="setting__mybooks-card-img-title">The taking of Anie Thorne</h3>
+                            <a href='./book.html' class="setting__mybooks-card-img-info">To Book
+                            </a>
                         </div>
-                        <div class="form-box">
-                            <label for="email">E-mail Address:</label>
-                            <input type="email" id="email" placeholder="Your e-mail">
+                    </div>
+                    <div class="setting__mybooks-card">
+                        <div class="setting__mybooks-card-img">
+                            <h3 class="setting__mybooks-card-img-title">The taking of Anie Thorne</h3>
+                            <a href='./book.html' class="setting__mybooks-card-img-info">To Book
+                            </a>
                         </div>
-                        <div class="setting__account-picture">
-                            <img src="./../dev-data/img/default.jpg" alt="user picuter">
-                            <input class="form__upload" type="file" accept="image/*" id="photo" name="photo">
-                            <label for="photo">Choose new photo</label>
+                    </div>
+                    <div class="setting__mybooks-card">
+                        <div class="setting__mybooks-card-img">
+                            <h3 class="setting__mybooks-card-img-title">The taking of Anie Thorne</h3>
+                            <a href='./book.html' class="setting__mybooks-card-img-info">To Book
+                            </a>
                         </div>
-                        <button class="saveSett btn-special-animation">Save settings</button>
-                    </form>
-
-                </div>
-                <div class="setting__passwordChange">
-                    <form>
-                        <h2 class="setting__passwordChange-title">Password Change</h2>
-                        <div class="form-box">
-                            <label for="password">Current Password:</label>
-                            <input type="password" id="password" placeholder="Enter current password">
-                        </div>
-                        <div class="form-box">
-                            <label for="password">New Password:</label>
-                            <input type="password" id="password" placeholder="Enter new password">
-                        </div>
-                        <div class="form-box">
-                            <label for="password2">Confrim Password:</label>
-                            <input type="password" id="password2" placeholder="Confrim your password">
-                        </div>
-                        <button class="savePass btn-special-animation">Save password</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <footer class="footer">
         <div class="wrapper">
