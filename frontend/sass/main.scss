@@ -849,20 +849,49 @@ body {
             img{
                 margin-top: 1.5em;
                 height: 5.5em;
+                width: 5.5em;
                 border-radius: 50%;
             }
 
-            .form__upload+label {
-                color: $main-color;
+            .form__upload {
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+              }
+
+              .form__upload:focus+label {
+                outline: 3px solid $main-color;
+                outline-offset: 3px;
+              }
+
+              .form__upload+label {
+                margin-left: 1em;
+                color: $dark;
                 display: inline-block;
-                border-bottom: 1px solid $main-color;
                 text-decoration: none;
-                // font-weight: bold;
+                border-bottom: 1px solid $dark;
+                padding: 3px;
+                // -webkit-transition: all 0.2s;
+                transition: all 0.2s;
                 cursor: pointer;
-            }
+              }
+
+              .form__upload+label:hover {
+                background-color: $dark;
+                color: $white;
+                // -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+                -webkit-transform: translateY(-2px);
+                transform: translateY(-2px);
+              }
         }
 
         .saveSett {
+            position: relative;
+            right: 0;
             margin-top: 1em;
             display: flex;
             justify-content: center;
