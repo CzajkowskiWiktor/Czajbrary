@@ -167,7 +167,47 @@ body {
         margin-left: 1em;
     }
 
+    .nav--user {
+        display: none;
+        margin-bottom: 0.5em;
+
+        .nav__el {
+            text-decoration: none;
+            color: $white;
+            padding: 0.5em 1em;
+            // margin: 0.5em;
+            font-size: 2rem;
+            // margin: 0 0.5em;
+            transition: color .3s;
+
+            &:hover {
+                color: $main-color;
+            }
+
+            img {
+                height: 2em;
+                width: 2em;
+                border-radius: 50%;
+            }
+        }
+
+        .btn {
+            border-radius: 10px;
+            color: $darker;
+            // margin: 0;
+
+            &:hover {
+                color: $darker;
+            }
+
+            &::before {
+                background-color: rgb(173, 173, 173);
+            }
+        }
+    }
+
     .nav__ref {
+        display: flex;
         &-item, &-btn {
             text-decoration: none;
             text-transform: uppercase;

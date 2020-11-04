@@ -269,6 +269,49 @@ body {
   margin-left: 1em;
 }
 
+.nav-desktop .nav--user {
+  display: none;
+  margin-bottom: 0.5em;
+}
+
+.nav-desktop .nav--user .nav__el {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.nav-desktop .nav--user .nav__el:hover {
+  color: #1755e7;
+}
+
+.nav-desktop .nav--user .nav__el img {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+}
+
+.nav-desktop .nav--user .btn {
+  border-radius: 10px;
+  color: #1a1a1a;
+}
+
+.nav-desktop .nav--user .btn:hover {
+  color: #1a1a1a;
+}
+
+.nav-desktop .nav--user .btn::before {
+  background-color: #adadad;
+}
+
+.nav-desktop .nav__ref {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .nav-desktop .nav__ref-item, .nav-desktop .nav__ref-btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -1471,6 +1514,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .nav-desktop .nav__logo {
+    font-size: 4rem;
+  }
+  .nav-desktop .nav--user .nav__el {
+    font-size: 2.3rem;
   }
   .books__card {
     margin-bottom: 4em;

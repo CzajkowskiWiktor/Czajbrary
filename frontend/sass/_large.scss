@@ -17,6 +17,16 @@
 
     .nav-desktop {
         display: flex;
+
+        .nav__logo {
+            font-size: 4rem;
+        }
+
+        .nav--user {
+            .nav__el {
+                font-size: 2.3rem;
+            }
+        }
     }
 
     .books {
