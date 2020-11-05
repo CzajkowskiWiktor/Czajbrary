@@ -221,6 +221,69 @@ body {
           transform: scaleY(1);
 }
 
+.nav-mobile .nav--user {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-mobile .nav--user .nav__el {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 2.6rem;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-mobile .nav--user .nav__el::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  content: '';
+}
+
+.nav-mobile .nav--user .nav__el:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.nav-mobile .nav--user .nav__el img {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+}
+
+.nav-mobile .nav--user button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-mobile .nav--user button i {
+  margin-right: 0.3em;
+}
+
 @-webkit-keyframes navItemsAnim {
   from {
     -webkit-transform: translateX(200%);
@@ -271,14 +334,14 @@ body {
 
 .nav-desktop .nav--user {
   display: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
 }
 
 .nav-desktop .nav--user .nav__el {
   text-decoration: none;
   color: #fff;
   padding: 0.5em 1em;
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
@@ -294,16 +357,17 @@ body {
 }
 
 .nav-desktop .nav--user .btn {
+  padding: 0.3em 0.8em;
+  margin-right: 1em;
+  color: #fff;
   border-radius: 10px;
-  color: #1a1a1a;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .nav-desktop .nav--user .btn:hover {
-  color: #1a1a1a;
-}
-
-.nav-desktop .nav--user .btn::before {
-  background-color: #adadad;
+  color: #1755e7;
 }
 
 .nav-desktop .nav__ref {
