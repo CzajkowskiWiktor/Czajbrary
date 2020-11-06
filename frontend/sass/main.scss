@@ -544,11 +544,18 @@ body {
     overflow: hidden;
 
     .form__box {
-        position: absolute;
-        width: 85%;
-        top: 30%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -30%);
+        transform: translate(-50%);
+        width: 85%;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         background-color: $white;
         box-shadow: 0 0 20px $darker;
         margin-top: 3em;
@@ -655,7 +662,7 @@ body {
     }
 }
 
-//BOOK
+////////////--BOOK--/////////////
 .book-header {
     position: relative;
     display: flex;
@@ -809,8 +816,11 @@ body {
 //renting a book
 .rent {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 80vh;
-    padding: 2em;
+    padding: 4em 1em;
 
     .white-block {
         background-color: $darker;
@@ -818,14 +828,14 @@ body {
     }
 
     &-box {
-        position: absolute;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%);
         width: 90%;
         min-height: 200px;
         max-height: 300px;
@@ -850,7 +860,7 @@ body {
             margin-top: 0.5em;
             padding: 0.5em;
             border-radius: 10px;
-            width: 50%;
+            width: 80%;
             border: none;
             background-color: $white;
             color: $darker;

@@ -678,12 +678,25 @@ body {
 }
 
 .signup .form__box {
-  position: absolute;
-  width: 85%;
-  top: 30%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -30%);
-          transform: translate(-50%, -30%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 85%;
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px #1a1a1a;
           box-shadow: 0 0 20px #1a1a1a;
@@ -980,8 +993,17 @@ body {
 
 .rent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 80vh;
-  padding: 2em;
+  padding: 4em 1em;
 }
 
 .rent .white-block {
@@ -990,7 +1012,7 @@ body {
 }
 
 .rent-box {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1006,8 +1028,8 @@ body {
           flex-direction: column;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 90%;
   min-height: 200px;
   max-height: 300px;
@@ -1034,7 +1056,7 @@ body {
   margin-top: 0.5em;
   padding: 0.5em;
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
   border: none;
   background-color: #fff;
   color: #1a1a1a;
@@ -1451,10 +1473,6 @@ body {
   }
   .signup .form__box {
     width: 440px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
   }
   .signup .form__box form {
     font-size: 2rem;
@@ -1574,6 +1592,15 @@ body {
   .header {
     background-image: url("./../img/bookcase-1869616_1920.jpg");
   }
+  .header__title {
+    font-size: 9rem;
+  }
+  .header__text {
+    font-size: 2.8rem;
+  }
+  .header__btn {
+    font-size: 2rem;
+  }
   .nav-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1590,7 +1617,17 @@ body {
     width: 30%;
   }
   .signup {
-    min-height: 94.5vh;
+    min-height: 94vh;
+  }
+  .signup .form__box {
+    width: 550px;
+  }
+  .signup .form__box form {
+    font-size: 2.5rem;
+    padding: 1.5em;
+  }
+  .signup .form__box .send, .signup .form__box .clear, .signup .form__box .close {
+    font-size: 2rem;
   }
   .book-header {
     min-height: 50vh;

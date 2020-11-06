@@ -2,6 +2,7 @@ const email = document.querySelector('#email');
 const pass = document.querySelector('#password');
 const sendBtn = document.querySelector('.send');
 const clearBtn = document.querySelector('.clear');
+const popup = document.querySelector('.popup');
 
 const showError = (input, msg) => {
     const formBox = input.parentElement;
@@ -52,9 +53,9 @@ const checkErrors = () => {
         }
     })
 
-    // if(errorCount === 0) {
-    //     popup.classList.add('show-popup');
-    // }
+    if(errorCount === 0) {
+        popup.classList.add('show-popup');
+    }
 
     console.log(errorCount);
 };
@@ -68,11 +69,11 @@ sendBtn.addEventListener('click', e => {
     checkErrors();
 });
 
-clearBtn.addEventListener('click', e => {
-    e.preventDefault();
+// clearBtn.addEventListener('click', e => {
+//     e.preventDefault();
 
-    [email, pass].forEach(el => {
-        el.value = '';
-        clearError(el);
-    });
-});
+//     [email, pass].forEach(el => {
+//         el.value = '';
+//         clearError(el);
+//     });
+// });
