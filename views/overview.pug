@@ -1,0 +1,29 @@
+extends base
+
+block content
+    header.header.section
+        .header-shadow
+        h1.header__title Czajbrary
+        p.header__text Welcome to my book collections!
+        a.header__btn.btn-special-animation(href='#books') Show books
+        .white-block.white-block-left
+    main.main
+        section#books.books.section-padding.section.white-section
+            .wrapper
+                h2.section-title Books
+                .books__cards
+                    each book in books
+                        .books__card.os-animation(data-animation='fadeInUp' data-delay='.2s' onclick='void(0)')
+                            .books__card-img
+                                .books__card-img-shadow
+                                img.books__card-img-picture(src=`/img/books/${book.imageCover}`, alt=`${book.title}`)
+                                p.books__card-img-info More info..
+                                    i.fas.fa-angle-double-right
+                            .books__card-info
+                                h3.books__card-info-title= book.title
+                                ul.books__card-info-list
+                                    li.books__card-info-list-item.author= `author: ${book.author}`
+                                    li.books__card-info-list-item.genre= `genre: ${book.genre}`
+                                    li.books__card-info-list-item.language= book.language
+                                    li.books__card-info-list-item.rating= `rating: ${book.ratingsAverage} (${book.ratingsQuantity})`
+                                a.books__card-info-btn.btn-special-animation(href=`/book/${book.slug}`) See details

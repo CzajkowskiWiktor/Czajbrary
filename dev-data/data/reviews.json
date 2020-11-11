@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "5c8a1d5b0190b214360da001",
+        "review": "This book was very interesting, some moments were breathtaking nad horrifing. It was pleasure to read it",
+        "rating": 5,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9800"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da002",
+        "review": "This book was very interesting, some moments were breathtaking nad horrifing. It was pleasure to read it",
+        "rating": 5,
+        "user": "5c8a1e1a2f8fb814b56fa182",
+        "book": "5c88fa8cf4afda39709c9800"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da003",
+        "review": "This book was very interesting, some moments were breathtaking nad horrifing. It was pleasure to read it",
+        "rating": 4.5,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9801"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da004",
+        "review": "Ta ksiazka byla fascynujaca, historia glownego bohatera inspiruje. Z przyjemnoscia sie ja czytalo.",
+        "rating": 5,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9802"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da005",
+        "review": "Ta ksiazka byla fascynujaca, wszechswiat jest nieosiagalny naszej wyobrazni. Z przyjemnoscia sie ja czytalo.",
+        "rating": 5,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9803"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da006",
+        "review": "Ta ksiazka byla bardzo dobra, historia glownego bohatera inspiruje. Z przyjemnoscia sie ja czytalo.",
+        "rating": 4,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9804"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da007",
+        "review": "Ta ksiazka byla bardzo dobra, Momentami dalo sie odczuc strach. Z przyjemnoscia sie ja czytalo.",
+        "rating": 4,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9805"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360da008",
+        "review": "Ta ksiazka byla bardzo dobra, Momentami dalo sie odczuc strach. Z przyjemnoscia sie ja czytalo.",
+        "rating": 5,
+        "user": "5c8a1dfa2f8fb814b56fa181",
+        "book": "5c88fa8cf4afda39709c9806"
+    }
+]

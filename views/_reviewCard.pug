@@ -1,0 +1,13 @@
+mixin reviewCard(review)
+    .reviews__box
+        .reviews__box-img
+            img(src=`/img/users/${review.user.photo}`, alt=`${review.user.name}`)
+        .reviews__box-info
+            .reviews__box-quote
+                i.fas.fa-quote-right
+            p.reviews__box-text= review.review
+            strong= review.user.name
+        .reviews__rating
+            each star in [1, 2, 3, 4, 5]
+                svg.reviews__star(class=`reviews__star--${review.rating >= star ? 'active' : 'inactive'}`)
+                    use(xlink:href='/img/icons.svg#icon-star')

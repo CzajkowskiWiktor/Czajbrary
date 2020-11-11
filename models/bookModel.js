@@ -85,10 +85,10 @@ bookSchema.virtual('reviews', {
 });
 
 //Document middleware
-// bookSchema.pre('save', function(next) {
-//     this.slug = slugify(this.title, {lower: true});
-//     next();
-// });
+bookSchema.pre('save', function(next) {
+    this.slug = slugify(this.title, {lower: true});
+    next();
+});
 
 // bookSchema.post('save', function (doc, next) {
 

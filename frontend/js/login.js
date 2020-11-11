@@ -3,6 +3,8 @@ const pass = document.querySelector('#password');
 const sendBtn = document.querySelector('.send');
 const clearBtn = document.querySelector('.clear');
 const popup = document.querySelector('.popup');
+const closeBtn = document.querySelector('.close');
+const popupText = document.querySelector('.popup__text');
 
 const showError = (input, msg) => {
     const formBox = input.parentElement;
@@ -54,26 +56,55 @@ const checkErrors = () => {
     })
 
     if(errorCount === 0) {
-        popup.classList.add('show-popup');
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        login(email, password);
     }
 
     console.log(errorCount);
 };
 
-sendBtn.addEventListener('click', e => {
-    e.preventDefault();
+const login = async (email, password) => {
+    try {
+        const result = await axios({
+            method: 'POST',
+            url: 'http://127.0.0.1:4000/api/v1/users/login',
+            data: {
+                email,
+                password
+            }
+        });
 
+        if(result.data.status === 'success') {
+            popup.classList.add('show-popup');
+            window.setTimeout(() => {
+                location.assign('/');
+            }, 2000);
+
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show-popup');
+                location.assign('/');
+            });
+        }
+
+        console.log(result);
+    } catch (err) {
+        popupText.innerHTML = err.response.data.message;
+        popup.classList.add('show-popup');
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('show-popup');
+            location.reload();
+        });
+    }
+};
+
+document.querySelector('.form').addEventListener('submit', e => {
+    e.preventDefault();
     checkForm([email, pass]);
     checkLength(pass, 8);
     checkMail(email);
     checkErrors();
 });
 
-// clearBtn.addEventListener('click', e => {
-//     e.preventDefault();
+// module.exports = {loggedIn};
 
-//     [email, pass].forEach(el => {
-//         el.value = '';
-//         clearError(el);
-//     });
-// });

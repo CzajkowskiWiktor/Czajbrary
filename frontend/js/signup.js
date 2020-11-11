@@ -1,3 +1,5 @@
+// const { signup } = require("../../controllers/authController");
+
 const username = document.querySelector('#username');
 const pass = document.querySelector('#password');
 const pass2 = document.querySelector('#password2');
@@ -67,15 +69,55 @@ const checkErrors = () => {
     })
 
     if(errorCount === 0) {
-        popup.classList.add('show-popup');
+        const name = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const passwordConfirm = document.getElementById('password2').value;
+        signup(name, email, password, passwordConfirm);
+        // popup.classList.add('show-popup');
     }
 
     console.log(errorCount);
 }
 
-sendBtn.addEventListener('click', e => {
-    e.preventDefault();
+const signup = async (name, email, password, passwordConfirm) => {
+    try {
+        const result = await axios({
+            method: 'POST',
+            url: 'http://127.0.0.1:4000/api/v1/users/signup',
+            data: {
+                name,
+                email,
+                password,
+                passwordConfirm
+            }
+        });
 
+        if(result.data.status === 'success') {
+            popup.classList.add('show-popup');
+            window.setTimeout(() => {
+                location.assign('/');
+            }, 2000);
+
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show-popup');
+                location.assign('/');
+            });
+        }
+
+        console.log(result);
+    } catch (err) {
+        popupText.innerHTML = err.response.data.message;
+        popup.classList.add('show-popup');
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('show-popup');
+            location.reload();
+        });
+    }
+};
+
+document.querySelector('.form-signup').addEventListener('submit', e => {
+    e.preventDefault();
     checkForm([username, pass, pass2, email]);
     checkLength(username, 3);
     checkLength(pass, 8);
@@ -83,6 +125,13 @@ sendBtn.addEventListener('click', e => {
     checkMail(email);
     checkErrors();
 });
+
+
+// sendBtn.addEventListener('click', e => {
+//     e.preventDefault();
+
+
+// });
 
 clearBtn.addEventListener('click', e => {
     e.preventDefault();
@@ -93,6 +142,6 @@ clearBtn.addEventListener('click', e => {
     });
 });
 
-closeBtn.addEventListener('click', () => {
-    popup.classList.remove('show-popup');
-});
+// closeBtn.addEventListener('click', () => {
+//     popup.classList.remove('show-popup');
+// });

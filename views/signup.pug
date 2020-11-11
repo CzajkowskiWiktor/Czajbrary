@@ -1,0 +1,31 @@
+extends base
+
+block content
+    section.signup
+        .wrapper
+            .form__box
+                form.form-signup
+                    h1 Create a New Account!
+                    .form-box
+                        label(for='username') Name:
+                        input(type='text' id='username' placeholder='Enter your name')
+                        p.error-text error
+                    .form-box
+                        label(for='password') Password:
+                        input(type='password' id='password' placeholder='Enter your password')
+                        p.error-text error
+                    .form-box
+                        label(for='password2') Confirm Password:
+                        input(type='password' id='password2' placeholder='Confirm your password')
+                        p.error-text error
+                    .form-box
+                        label(for='email') E-mail Address:
+                        input(type='email' id='email' placeholder='Enter your e-mail')
+                        p.error-text error
+                    .control-buttons
+                        button.clear.btn-special-animation Clear
+                        button.send.btn-special-animation Register
+                    .popup
+                        p You have just register successfully to Czajbrary!
+                        button.close.btn-special-animation Close
+    script(src='/js/signup.js')

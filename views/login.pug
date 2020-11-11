@@ -1,0 +1,22 @@
+extends base
+
+block content
+    section.signup
+        .wrapper
+            .form__box
+                form.form
+                    h1 Log in to Czajbrary!
+                    .form-box
+                        label(for='email') E-mail Address:
+                        input(type='email', id='email', placeholder='Enter your e-mail', class='form__input', required)
+                        p.error-text error
+                    .form-box
+                        label(for='password') Password:
+                        input(type='password', id='password', placeholder='Enter your password' class='form__input', required, minlength='8')
+                        p.error-text error
+                    .control-buttons
+                        button.send.btn-special-animation Log in
+                    .popup
+                        p.popup__text You have just logged in successfully!
+                        button.close.btn-special-animation Close
+    script(src='/js/login.js')

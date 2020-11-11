@@ -1,7 +1,7 @@
 [
   {
     "_id": "5c8a1d5b0190b214360dc057",
-    "name": "Jonas Schmedtmann",
+    "name": "Wiktor Czajkowski",
     "email": "admin@czajbrary.pl",
     "role": "admin",
     "active": true,
@@ -10,8 +10,8 @@
   },
   {
     "_id": "5c8a1dfa2f8fb814b56fa181",
-    "name": "Lourdes Browning",
-    "email": "loulou@example.com",
+    "name": "Wiktor Czajkowwski",
+    "email": "wiktor@example.com",
     "role": "user",
     "active": true,
     "photo": "user-2.jpg",
@@ -19,29 +19,20 @@
   },
   {
     "_id": "5c8a1e1a2f8fb814b56fa182",
-    "name": "Sophie Louise Hart",
-    "email": "sophie@example.com",
+    "name": "Guest 1",
+    "email": "guest@example.com",
     "role": "user",
     "active": true,
     "photo": "user-3.jpg",
     "password": "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
   },
   {
-    "_id": "5c8a1ec62f8fb814b56fa183",
-    "name": "Ayla Cornell",
-    "email": "ayls@example.com",
+    "_id": "5c8a1e1a2f8fb814b56fa183",
+    "name": "Test user",
+    "email": "test@example.com",
     "role": "user",
     "active": true,
     "photo": "user-4.jpg",
-    "password": "$2a$12$tm33.M/4pfEbZF64WbFuHuVFv85v4qEhi.ik8njbud7yaoqCZpjiy"
-  },
-  {
-    "_id": "5c8a1f292f8fb814b56fa184",
-    "name": "Leo Gillespie",
-    "email": "leo@example.com",
-    "role": "user",
-    "active": true,
-    "photo": "user-5.jpg",
-    "password": "$2a$12$OOPr90tBEBF1Iho3ox0Jde0O/WXUR0VLA5xdh6tWcu7qb.qOCvSg2"
+    "password": "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
   }
 ]

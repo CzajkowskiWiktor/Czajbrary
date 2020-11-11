@@ -1,0 +1,53 @@
+extends base
+
+include _reviewCard
+
+block content
+    section.book-header.section
+        .white-block.white-block-left
+        .wrapper
+            h3.book__title= book.title
+
+    section.book-description.section.section-padding
+        .white-block.white-block-left
+        .wrapper
+            .book-box
+                .book-description__box-info.book-description__box-info--right
+                    img(src=`/img/books/${book.imageCover}`, alt=`${book.title}`)
+                    ul
+                        li
+                            i.far.fa-user
+                            span= `Author: ${book.author}`
+                        li
+                            i.fas.fa-book
+                            span= `Genre: ${book.genre}`
+                        li
+                            i.far.fa-calendar-alt
+                            span= `Year of prod: ${book.year}`
+                        li
+                            i.fas.fa-globe-europe
+                            span= `Language: ${book.language}`
+                        li
+                            i.far.fa-check-square
+                            span= `Read: ${book.read}`
+                        li
+                            i.far.fa-star
+                            span= `Rating: ${book.ratingsAverage}`
+                .book-description__box-desc.book-description__box-desc--right
+                    h3.book__title Description
+                    p.book__desc= book.description
+    section.book-reviews.section
+        .white-block.white-block-left
+        .wrapper
+            h2.book-reviews__heading Reviews
+            .reviews__boxes
+                each review in book.reviews
+                    +reviewCard(review)
+
+    section.rent
+        .white-block.white-block-left
+        .wrapper
+            .rent-box
+                h2.rent-box__title Would you like to read this book?
+                p.rent-box__text For only 10$ you can rent that book for a month!
+                button.rent-box__btn.btn-special-animation Rent a book!

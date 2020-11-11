@@ -139,8 +139,8 @@ body {
     }
 
     .nav--user {
-        // display: flex;
-        display: none;
+        display: flex;
+        // display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -185,9 +185,9 @@ body {
             border: none;
             cursor: pointer;
 
-            i {
-                margin-right: 0.3em;
-            }
+            // i {
+            //     margin-right: 0.3em;
+            // }
         }
     }
 }
@@ -212,7 +212,7 @@ body {
     align-items: center;
     border: none;
     background-color: $darker;
-    padding: 1em;
+    padding: 0.5em;
     z-index: 1;
 
     .nav__logo {
@@ -222,7 +222,7 @@ body {
     }
 
     .nav--user {
-        display: none;
+        display: inline;
         margin-bottom: 0.1em;
 
         .nav__el {
@@ -248,19 +248,20 @@ body {
         .btn {
             padding: 0.3em 0.8em;
             margin-right: 1em;
-            color: $white;
+            color: $darker;
+            font-weight: normal;
             border-radius: 10px;
             border: none;
-            background: none;
+            // background: none;
             cursor: pointer;
 
             &:hover {
-                color: $main-color;
+                color: $darker;
             }
 
-            // &::before {
-            //     background-color: rgb(173, 173, 173);
-            // }
+            &::before {
+                background-color: rgb(173, 173, 173);
+            }
         }
     }
 
@@ -271,7 +272,7 @@ body {
             text-transform: uppercase;
             padding: 0.5em 1em;
             margin: 0.5em;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         &-item {
@@ -369,7 +370,7 @@ body {
         position: relative;
         margin: 1em 0;
         height: 450px;
-        max-width: 350px;
+        width: 350px;
         color: $white;
         text-align: center;
         perspective: 1000px;
@@ -388,26 +389,56 @@ body {
         }
 
         &-img {
+            position: relative;
             padding: 2em;
             height: 100%;
             border-radius: 10px;
-            background-image: $light-blue-gradient, url('./../img/ttoat.jpg');
-            background-size: 350px 450px;
-            // background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
+            // background-image: $light-blue-gradient, url('./../img/ttoat.jpg');
+            // background-size: 350px 450px;
+            // // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: top;
             transition: transform 1s, opacity 1s;
+            overflow: hidden;
+            // z-index: 1;
 
-            &-title{
-                // font-family: 'Grenze Gotisch', cursive;
-                font-size: 2.3rem;
+            &-picture {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+                width: 350px;
+                height: 450px;
+                // overflow: hidden;
             }
+
+            &-shadow {
+                position: absolute;
+                background-color: rgba(0,0,0,.3);
+                width: 350px;
+                height: 450px;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+
+            // &-title{
+            //     // font-family: 'Grenze Gotisch', cursive;
+            //     font-size: 2.3rem;
+            //     color: rgb(0, 0, 0);
+            // }
 
             &-info {
                 position: absolute;
                 bottom: 30px;
                 right: 30px;
                 font-size: 1.6rem;
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                z-index: 3;
 
                 i {
                     margin-right: 0.3em;
@@ -430,6 +461,7 @@ body {
             opacity: 0;
             transform: rotateY(180deg);
             transition: transform 1s, opacity 1s;
+            z-index: 3;
 
             &-title, &-btn {
                 position: absolute;
@@ -439,6 +471,7 @@ body {
 
             &-title {
                 top: 1.2em;
+                width: 100%;
                 font-family: 'Grenze Gotisch', cursive;
                 font-size: 3rem;
             }
@@ -605,6 +638,14 @@ body {
             visibility: visible;
         }
 
+        .form__input:focus {
+            outline: none;
+            border-bottom: 3px solid #02d849;
+        }
+        .form__input:focus:invalid {
+            border-bottom: 3px solid #e94918;
+        }
+
         .control-buttons {
             display: flex;
             justify-content: flex-end;
@@ -657,7 +698,7 @@ body {
         }
 
         .show-popup {
-            top: 150px;
+            top: 50px;
         }
     }
 }
@@ -736,7 +777,11 @@ body {
 //REVIEWS
 .book-reviews {
     position: relative;
-    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    padding: 4em 1em;
     background-color: $dark;
 
     &__heading {
@@ -747,70 +792,75 @@ body {
         font-weight: normal;
         letter-spacing: 2px;
     }
-}
 
-.reviews {
-    &__box {
-        position: relative;
-        margin: 2em;
-        margin-bottom: 10em;
-        padding: 2em;
-        border-radius: 10px;
-        background-color: $white;
-        box-shadow: 0 0 10px $darker;
-        transition: transform .3s;
 
-        &:hover {
-            transform: scale(0.95);
+    .reviews {
+        &__box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 5em;
+            padding: 2em;
+            border-radius: 10px;
+            background-color: $white;
+            box-shadow: 0 0 10px $darker;
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+        }
+        &__box-img {
+            position: absolute;
+            top: 8%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        &__box-quote {
+            margin-bottom: 1em;
+            font-size: 3rem;
+            color: $main-color;
+        }
+
+        &__box-text {
+            margin-bottom: 1em;
+            font-size: 1.4rem;
+            color: $dark;
+        }
+
+        &__rating {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            font-size: 0.5rem;
+            margin-top: 2em;
+        }
+
+        &__star {
+            height: 2.5rem;
+            width: 2.5rem;
+            margin-right: 0.5em;
+        }
+
+        &__star--active {
+            fill: $main-color;
+        }
+
+        &__star--inactive {
+            fill: #bbb;
         }
     }
-    &__box-img {
-        position: absolute;
-        top: 8%;
-        left: 75%;
-        transform: translate(-50%, -50%);
 
-        img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-    }
-
-    &__box-quote {
-        margin-bottom: 1em;
-        font-size: 3rem;
-        color: $main-color;
-    }
-
-    &__box-text {
-        margin-bottom: 1em;
-        font-size: 1.4rem;
-        color: $dark;
-    }
-
-    &__rating {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        font-size: 0.5rem;
-        margin-top: 2em;
-    }
-
-    &__star {
-        height: 2.5rem;
-        width: 2.5rem;
-        margin-right: 0.5em;
-    }
-
-    &__star--active {
-        fill: $main-color;
-    }
-
-    &__star--inactive {
-        fill: #bbb;
-    }
 }
 
 //renting a book
@@ -1140,6 +1190,35 @@ body {
                 }
             }
         }
+    }
+}
+
+.err {
+    background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(116,116,116,1) 100%, rgba(0,30,255,1) 100%);
+    // background-color: $darker;
+}
+
+.error-content{
+    position: relative;
+    min-height: 70vh;
+
+    &-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 0.5em;
+        font-size: 2rem;
+        color: #fa2904;
+    }
+
+    &__msg {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $white;
     }
 }
 

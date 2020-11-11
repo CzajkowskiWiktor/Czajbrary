@@ -24,25 +24,21 @@
     }
 
     .header__btn {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .nav-desktop {
         display: flex;
 
         .nav__logo {
-            font-size: 4rem;
+            font-size: 3.4rem;
         }
 
         .nav--user {
             // display: inline;
             .nav__el {
-                font-size: 2.3rem;
+                font-size: 2rem;
             }
-        }
-
-        .nav__ref {
-            // display: none;
         }
     }
 
@@ -95,6 +91,12 @@
                     padding: 0 4em;
                 }
             }
+        }
+    }
+
+    .book-reviews {
+        .wrapper {
+            width: 50%;
         }
     }
 

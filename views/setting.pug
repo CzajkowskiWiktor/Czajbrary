@@ -1,0 +1,46 @@
+extends base
+
+block content
+    section.setting
+        .wrapper
+            .setting-box
+                .setting__menu
+                    a(href='#')
+                        i.fas.fa-user-cog
+                    a(href='#')
+                        i.fas.fa-book
+                    a(href='#')
+                        i.far.fa-comment-dots
+                    - if(user.role === 'admin')
+                        a(href='#')
+                            i.far.fa-plus-square
+                .setting__account
+                    //- Without API
+                    //- form(action='/submit-user-data' method='POST')
+                    form.form-updateUser
+                        h2.setting__account-title Your Account Setting
+                        .form-box
+                            label(for='name') Name
+                            input(type='text', id='name', value=`${user.name}`, name='name')
+                        .form-box
+                            label(for='email') E-mail Address
+                            input(type='email', id='email', value=`${user.email}`, name='email')
+                        .setting__account-picture
+                            img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+                            input.form__upload(type='file', accept='image/*', id='photo', name='photo')
+                            label(for='photo') Choose new photo
+                        button.saveSett.btn-special-animation Save settings
+                .setting__passwordChange
+                    form.form-passwordChange
+                        h2.setting__passwordChange-title Change Password
+                        .form-box
+                            label(for='password-current') Current Password
+                            input(type='password', id='password-current', placeholder='Enter current password')
+                        .form-box
+                            label(for='password') New Password
+                            input(type='password', id='password', placeholder='Enter a new password', minlength=8)
+                        .form-box
+                            label(for='password-confirm') Confirm Password
+                            input(type='password', id='password-confirm', placeholder='Confirm new password', minlength=8)
+                        button.savePass.btn-special-animation Save password
+    script(src='/js/updateSettings.js')

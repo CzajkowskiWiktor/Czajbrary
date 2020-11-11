@@ -7,7 +7,9 @@
         "language": "english",
         "year": 2019,
         "read": "yes",
-        "imageCover": "thetakingofanie.jpg",
+        "imageCover": "book-1.jpg",
+        "ratingsAverage": 5,
+        "ratingsQuantity": 2,
         "description": "One night, Annie disappeared. There were searches, appeals. Everyone thought the worst. And then, after 48 hours, she came back. But she couldn't - or wouldn't - say what had happened to her. Something happened to my sister. I can't explain what. I just know that when she came back, she wasn't the same. She wasn't my Annie. I didn't want to admit, even to myself, that sometimes I was scared to death of my own little sister."
     },
     {
@@ -18,7 +20,9 @@
         "language": "english",
         "year": 2017,
         "read": "yes",
-        "imageCover": "thehouse.jpg",
+        "imageCover": "book-2.jpg",
+        "ratingsAverage": 4.5,
+        "ratingsQuantity": 1,
         "description": "Londoners Jack and Syd moved into the house a year ago. It seemed like their dream home: tons of space, the perfect location, and a friendly owner who wanted a young couple to have it. So when they made a grisly discovery in the attic, Jack and Syd chose to ignore it. That was a mistake. Because someone has just been murdered. Right outside their back door."
     },
     {
@@ -29,7 +33,9 @@
         "language": "polish",
         "year": 2016,
         "read": "yes",
-        "imageCover": "sztukazwicienstwa.jpg",
+        "imageCover": "book-3.jpg",
+        "ratingsAverage": 5,
+        "ratingsQuantity": 1,
         "description": "Firmy Nike nie trzeba nikomu przedstawiać ‒ to jeden z najpotężniejszych graczy na rynku odzieży, obuwia i sprzętu sportowego, z roczną sprzedażą rzędu 30 miliardów dolarów. Nie każdy jednak wie, kim jest Phil Knight ‒ człowiek, który stworzył tę markę za garść dolarów pożyczonych od ojca, a potem przez dziesięciolecia kształtował jej potęgę. Jego wspomnienia są fascynującą podróżą w czasie i zaskakująco szczerą, intymną opowieścią o tym, jak realizować marzenia. Knightowi dopisało szczęście: jak większość młodych ludzi, krótko po studiach nie miał szczegółowego planu na życie, ale miał swój szalony pomysł. Kochał bieganie i czuł, że nie będzie szczęśliwy, jeśli nie zwiąże kariery zawodowej z pasją. I właśnie o tym, jak zmienić zamiłowanie do sportu w niewyobrażalny sukces komercyjny, opowiada ten pamiętnik ‒ zaskakujący, skromny, niefiltrowany, zabawny i pięknie napisany."
     },
     {
@@ -39,7 +45,9 @@
         "genre": "scientific",
         "language": "polish",
         "year": 2019,
-        "imageCover": "stephenhawk.jpg",
+        "imageCover": "book-4.jpg",
+        "ratingsAverage": 5,
+        "ratingsQuantity": 1,
         "description": "Skąd się wzięliśmy? Czy ostatecznie przetrwamy? Czy postęp techniki uchroni nas przed zagładą? W jaki sposób moglibyśmy w pełni rozwinąć skrzydła? Stephen Hawking został uznany za jeden z największych umysłów naszych czasów, a jego heroiczne zmagania z chorobą, odkąd w wieku dwudziestu jeden lat zdiagnozowano u niego stwardnienie zanikowe boczne, stanowią trwałe źródło inspiracji dla nas wszystkich. Zasłynął zarówno z przełomowych dokonań w dziedzinie fizyki teoretycznej, jak i z nadzwyczajnej umiejętności objaśniania skomplikowanych pojęć w sposób przystępny dla każdego. Uwielbiano go również za szelmowskie poczucie humoru. Bezpośrednio przed śmiercią pracował nad swym ostatnim dziełem – zestawieniem odpowiedzi na „wielkie” pytania, które tak często stawiał, wykraczając poza granice ściśle akademickich badań."
     },
     {
@@ -50,7 +58,9 @@
         "language": "polish",
         "year": 1998,
         "read": "yes",
-        "imageCover": "feynman.jpg",
+        "imageCover": "book-5.jpg",
+        "ratingsAverage": 4,
+        "ratingsQuantity": 1,
         "description": "Richard P. Feynman - laureat Nagrody Nobla, genialny fizyk i idol dla młodych naukowców na całym świecie opowiada o swoim niezwykłym życiu. Zebrane w książce historie zaskoczą was, rozbawią i na nowo zainspirują do odkrywania tajemnic nauki. Feynman opowiada między innymi o śledztwie w sprawie przyczyn słynnej katastrofy promu Challenger. Jako członek powołanej w tym celu prezydenckiej komisji niczym najlepszy detektyw tropił to, co NASA chciała ukryć, i ujawnił zaniedbania, które doprowadziły do tragedii. Przy okazji naukowiec w fascynujący sposób opowiada o tajnikach inżynierii kosmicznej i podstawowych prawach fizyki. Do wyjaśnienia dziennikarzom, co poszło nie tak podczas feralnego startu, wystarczyły mu kawałek gumy i szklanka wody z lodem."
     },
     {
@@ -61,7 +71,9 @@
         "language": "polish",
         "year": 2006,
         "read": "yes",
-        "imageCover": "komorka.jpg",
+        "imageCover": "book-6.jpg",
+        "ratingsAverage": 4,
+        "ratingsQuantity": 1,
         "description": "Następny telefon może być twoim ostatnim… Autor komiksów Clay Riddell ma w kieszeni świeżo odpisaną korzystną umowę wydawniczą , kiedy w Bostonie rozpętuje się piekło. Ulice zapełniają się bełkoczącymi, rzucającymi się na siebie bez powodu ludźmi, pojazdy wjeżdżają w przechodniów i w budynki, a z nieba spadają samoloty. Szaleństwo ogarnia każdego, kto odebrał telefon komórkowy. Tajemniczy sygnał wyzwala agresję i destrukcyjne skłonności tkwiące w każdym człowieku. W ogarniętym chaosem świecie rozpoczyna się bezlitosna walka o przeżycie."
     },
     {
@@ -72,7 +84,9 @@
         "language": "polish",
         "year": 1998,
         "read": "yes",
-        "imageCover": "kosci.jpg",
+        "imageCover": "book-7.jpg",
+        "ratingsAverage": 5,
+        "ratingsQuantity": 1,
         "description": "Po części thriller, po części romans z dodatkiem elementów nadprzyrodzonych. Jedna z najbardziej poruszających powieści Stephena Kinga, zainspirowana słynną REBEKĄ Daphne du Maurier. Cztery lata po tragicznej, niespodziewanej śmierci poczytny autor Mike Noonan nadal zmaga się z twórczą niemocą. Wraz z Johanną umarło także nienarodzone dziecko pary – dziewczynka, której zamierzali nadać imię Kia. Niezdolny do pisania, wypalony psychicznie, prześladowany wspomnieniami i tęsknotą za ukochaną kobietą, Mike postanawia stawić wreszcie czoła swoim problemom. Opuszcza rodzinne Derry, by powrócić do miejsca, w którym spędził kiedyś z żoną najszczęśliwsze dni życia – letniego domu nazwanego Śmiechem Sary, stojącego nad pięknym jeziorem Dark Score, nieopodal miasteczka oznaczonego na mapie symbolem TR-90. W TR rządzi niepodzielnie lokalny magnat, bezwzględny multimilioner Max Devore. Wbrew swojej woli Mike zostaje wciągnięty w otaczające miejscową społeczność konflikty i tajemnice, mające genezę w przeszłości i podsycane przez gnieżdżące się w domu siły nadprzyrodzone. Jego głównym przeciwnikiem staje się Devore, który postawił sobie za cel odebranie Mattie – młodziutkiej wdowie po swoim zmarłym synu – opieki nad trzyletnią wnuczką Kyrą. Urzeczony urodą wdowy, widząc w Kyrze córkę, której pozbawił go los, Mike bierze stronę kobiety w sporze z milionerem, co prowadzi do eskalacji przemocy."
     },
     {
@@ -83,7 +97,7 @@
         "language": "polish",
         "year": 2019,
         "read": "no",
-        "imageCover": "java.jpg",
+        "imageCover": "book-8.jpg",
         "description": "Świat usłyszał o Javie pod koniec 1995 roku. Wkrótce stała się niezwykle popularną i cenioną technologią. Dziś jest dojrzałym, rozbudowanym, elastycznym, a przy tym niezwykle starannie zaprojektowanym językiem programowania, który może służyć do pisania dużych systemów, małych programów, aplikacji mobilnych i aplikacji WWW. Charakteryzuje się też wysublimowanymi zabezpieczeniami, które w niego wbudowano. Każdy, kto chce pisać dobry i wydajny kod, powinien dobrze poznać zarówno podstawowe, jak i zaawansowane cechy Javy. Ta książka jest kolejnym, zaktualizowanym i uzupełnionym wydaniem kultowego podręcznika dla profesjonalnych programistów Javy - to pierwszy tom, w którym omówiono podstawy języka oraz najważniejsze zagadnienia związane z programowaniem interfejsu użytkownika. W tym wydaniu opisano pakiet JDK Java Standard Edition (SE) w wersji 9, 10 i 11. Teorii towarzyszą liczne przykłady kodu, obrazujące zasady działania niemal każdej przedstawionej tu funkcji czy biblioteki. Przykładowe programy są proste, aby ułatwić naukę najważniejszych zagadnień."
     },
     {
@@ -94,7 +108,7 @@
         "language": "polish",
         "year": 2015,
         "read": "no",
-        "imageCover": "javadosw.jpg",
+        "imageCover": "book-9.jpg",
         "description": "Java to język, który zrewolucjonizował świat programistów. Jej możliwości zostały docenione przez największe firmy. Dziś Java jest wykorzystywana w najbardziej zaawansowanych projektach. Wszędzie tam, gdzie są wymagane najwyższa wydajność i bezpieczeństwo, nie ma sobie równych! Aktualna wersja tego języka wprowadza wiele nowych konstrukcji i usprawnień — jeżeli chcesz błyskawicznie je poznać, zacznij od tej książki. Została ona napisana specjalnie z myślą o osobach chcących rozpocząć kodowanie z wykorzystaniem nowości z Javy 8. Jest przeznaczona dla doświadczonych programistów, lecz zawiera też podstawowe informacje na temat technik programowania obiektowego, wyjątków, typów i składni. Dzięki temu możesz błyskawicznie wdrożyć się w nowy język programowania! Natomiast jeśli znasz już Javę, z pewnością zainteresują Cię informacje o wyrażeniach lambda, projekcie Nashorn oraz nowym API do operacji na datach i czasie (JSR 310). Książka ta jest najlepszą lekturą dla wszystkich programistów zainteresowanych językiem Java oraz nowościami w Javie 8!"
     },
     {
@@ -105,7 +119,7 @@
         "language": "polish",
         "year": 2011,
         "read": "no",
-        "imageCover": "joomla.jpg",
+        "imageCover": "book-10.jpg",
         "description": "Nazwa Joomla! na pewno obiła Ci się już kiedyś o uszy. Popularność tego systemu bije wszelkie rekordy, bowiem niecodziennie spotkać można tak znakomite narzędzie, dostępne całkowicie za darmo, a umożliwiające bezproblemowe tworzenie zarówno prostych, jak i zaawansowanych stron internetowych. Niezależnie od tego, czy Twoim marzeniem jest umieszczenie w sieci prywatnego bloga politycznego, dużego portalu dla hodowców zwierząt futerkowych, czy strony firmowej, Joomla! 1.6 oferuje Ci swoją pomoc, nie żądając w zamian nawet jednej złotówki. Tę unikalną szansę zawdzięczasz pracy świetnych programistów, poświęcających swój wolny czas na udoskonalanie tego systemu zarządzania treścią. W niniejszej książce znajdziesz informacje na temat tego, jak zabrać się do tworzenia własnej witryny przy użyciu najnowszej wersji Joomla! 1.6 i jak maksymalnie ułatwić korzystanie z niej potencjalnym użytkownikom. Dowiesz się, jak bez kłopotu stworzyć funkcjonalne menu, selekcjonować artykuły i tworzyć ich ranking, umieszczać na stronie odnośniki, wstawiać interesującą grafikę i gadżety, takie jak zegar czy prognozę pogody. Nauczysz się rozplanowywać poszczególne elementy i efektywnie korzystać z opinii gości odwiedzających Twoją witrynę, aby móc ją cały czas doskonalić. Krótko mówiąc, odkryjesz, jak bez studiowania choćby jednego znacznika HTML zaprojektować funkcjonalną i przyjemną w odbiorze stronę internetową."
     }
 ]

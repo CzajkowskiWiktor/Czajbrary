@@ -1,0 +1,37 @@
+button.burger-btn
+    .burger-btn__box
+        .burger-btn__bars
+
+a.logo(href='/')
+    i.fab.fa-dropbox
+
+nav.nav.nav-mobile
+    if user
+        .nav.nav--user
+            a.nav__el(href='.#') My books
+            a.nav__el(href='/me')
+                img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+                span  My profile
+            button.nav__el.nav__el--logout.btn.btn-special-animation Log out
+                //- i.fas.fa-sign-out-alt
+    else
+        .nav__items
+            a.nav__item(href='/') Collection
+            a.nav__item(href='/login') Log in
+            a.nav__item(href='/signup') Sign up
+
+nav.nav.nav-desktop
+    a.nav__logo(href='/'): i.fab.fa-dropbox
+    if user
+        .nav.nav--user
+            a.nav__el(href='#') My books
+            a.nav__el(href='/me')
+                img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+                span  My profile
+            button.nav__el.nav__el--logout-desktop.btn.btn-special-animation Log out
+                //-   i.fas.fa-sign-out-alt
+    else
+        .nav__ref
+            a.nav__ref-item(href='/') Collection
+            a.nav__ref-item(href='/login') Log in
+            a.nav__ref-btn.btn-special-animation(href='/signup') Sign up

@@ -37,10 +37,10 @@ const reviewSchema = new mongoose.Schema({
 reviewSchema.index({ book: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, function(next) {
+    // this.populate({
+    //     path: 'book',
+    //     select: 'title author genre'
     this.populate({
-        path: 'book',
-        select: 'title author genre'
-    }).populate({
         path: 'user',
         select: 'name photo'
     });
@@ -64,7 +64,7 @@ reviewSchema.statics.calcAverageRatings = async function(bookId) {
     console.log(stats);
     console.log(stats.length);
 
-    if(stats.length >= 1) {
+    if(stats.length > 0) {
         await Book.findByIdAndUpdate(bookId, {
             ratingsQuantity: stats[0].nRating,
             ratingsAverage: stats[0].avgRating

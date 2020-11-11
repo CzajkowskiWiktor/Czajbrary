@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='shortcut icon' type='imgage/png' href='/img/book.png')
+        title Czajbrary | #{title}
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400&family=Montserrat:wght@400;700&display=swap')
+        link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.13.0/css/all.css' integrity='sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V' crossorigin='anonymous')
+        link(rel='stylesheet' href='/css/animate.css')
+        link(rel='stylesheet' href='/css/main.css')
+
+
+    body
+        // HEADER
+        include _header
+
+
+        //Content
+        block content
+
+        //FOOTER
+        include _footer
+
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js')
+        script(src='/js/jquery-3.5.1.js')
+        //- script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+        //- script(src='/js/slick.js')
+        script(src='/js/jquery.waypoints.min')
+        script(src='/js/animation.js')
+        script(src='/js/main.js')
+
