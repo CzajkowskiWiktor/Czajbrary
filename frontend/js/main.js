@@ -37,7 +37,7 @@ logoBtn.addEventListener('click', () => {
     nav.classList.remove('nav-mobile--active');
 });
 
-if(document.querySelector('.nav__el--logout')) {
+if(document.querySelector('.logoutBtn')) {
     console.log('zalogowany');
     const logoutBtn = document.querySelector('.nav__el--logout');
     const logoutBtnDesktop = document.querySelector('.nav__el--logout-desktop');
@@ -51,7 +51,7 @@ if(document.querySelector('.nav__el--logout')) {
             });
 
             if(res.data.status === 'success') {
-                location.reload(true);
+                location.assign('/');
             }
         } catch (err) {
             alert(err.response.data.message);

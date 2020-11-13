@@ -12,8 +12,9 @@ nav.nav.nav-mobile
             a.nav__el(href='/me')
                 img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
                 span  My profile
-            button.nav__el.nav__el--logout.btn.btn-special-animation Log out
-                //- i.fas.fa-sign-out-alt
+            button.nav__el.logoutBtn.nav__el--logout.btn.btn-special-animation
+                i.fas.fa-sign-out-alt
+                |  Log out
     else
         .nav__items
             a.nav__item(href='/') Collection
@@ -28,7 +29,7 @@ nav.nav.nav-desktop
             a.nav__el(href='/me')
                 img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
                 span  My profile
-            button.nav__el.nav__el--logout-desktop.btn.btn-special-animation Log out
+            button.nav__el.logoutBtn.nav__el--logout-desktop.btn.btn-special-animation Log out
                 //-   i.fas.fa-sign-out-alt
     else
         .nav__ref

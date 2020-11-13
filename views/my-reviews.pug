@@ -1,0 +1,19 @@
+extends base
+
+block content
+    section.setting
+        .wrapper
+            .setting-box
+                .setting__menu
+                    a(href='/me')
+                        i.fas.fa-user-cog
+                    a(href='/my-books')
+                        i.fas.fa-book
+                    a(href='#')
+                        i.far.fa-comment-dots
+                    - if(user.role === 'admin')
+                        a(href='#')
+                            i.far.fa-plus-square
+                .setting__account
+
+    script(src='/js/updateSettings.js')

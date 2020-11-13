@@ -45,7 +45,13 @@
     .books {
         &__card {
             margin-bottom: 4em;
-            width: 30%;
+            width: 29%;
+            &-img-info {
+                margin-right: 0;
+            }
+            // &-info-title{
+            //     font-size: 2.5rem;
+            // }
         }
     }
 

@@ -5,6 +5,7 @@ const clearBtn = document.querySelector('.clear');
 const popup = document.querySelector('.popup');
 const closeBtn = document.querySelector('.close');
 const popupText = document.querySelector('.popup__text');
+const logoutBtn = document.querySelector('.logoutBtn');
 
 const showError = (input, msg) => {
     const formBox = input.parentElement;
@@ -98,6 +99,18 @@ const login = async (email, password) => {
     }
 };
 
+const logout = async () => {
+    try {
+        const res = await axios({
+            method: 'GET',
+            url: 'http://127.0.0.1:3000/api/v1/users/logout'
+        })
+        if (res.data.status === 'success') location.assign('/');
+    } catch (err) {
+        alert('Error logging out! Try again.');
+    }
+};
+
 document.querySelector('.form').addEventListener('submit', e => {
     e.preventDefault();
     checkForm([email, pass]);
@@ -105,6 +118,8 @@ document.querySelector('.form').addEventListener('submit', e => {
     checkMail(email);
     checkErrors();
 });
+
+if(logoutBtn) logoutBtn.addEventListener('click', logout);
 
 // module.exports = {loggedIn};
 

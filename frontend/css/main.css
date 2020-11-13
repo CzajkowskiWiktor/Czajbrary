@@ -357,6 +357,7 @@ body {
 .nav-desktop .nav--user .btn {
   padding: 0.3em 0.8em;
   margin-right: 1em;
+  background-color: #fff;
   color: #1a1a1a;
   font-weight: normal;
   border-radius: 10px;
@@ -561,6 +562,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  max-height: 450px;
+  max-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,9 +595,10 @@ body {
 
 .books__card-info-title {
   top: 1.2em;
-  width: 100%;
+  margin-bottom: 1em;
+  width: 90%;
   font-family: 'Grenze Gotisch', cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .books__card-info-list {
@@ -1671,6 +1675,12 @@ body {
   }
 }
 
+@media (min-width: 900px) {
+  .books__card-img-info {
+    margin-right: 2em;
+  }
+}
+
 @media (min-width: 992px) {
   .section-title {
     font-size: 4.2rem;
@@ -1706,7 +1716,10 @@ body {
   }
   .books__card {
     margin-bottom: 4em;
-    width: 30%;
+    width: 29%;
+  }
+  .books__card-img-info {
+    margin-right: 0;
   }
   .signup {
     min-height: 94vh;

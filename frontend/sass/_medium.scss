@@ -240,3 +240,13 @@
         }
     }
 }
+
+@media(min-width: 900px) {
+    .books {
+        &__card {
+            &-img-info {
+                margin-right: 2em;
+            }
+        }
+    }
+}

@@ -2,6 +2,9 @@ extends base
 
 include _reviewCard
 
+block append head
+    script(src="https://js.stripe.com/v3/")
+
 block content
     section.book-header.section
         .white-block.white-block-left
@@ -50,4 +53,9 @@ block content
             .rent-box
                 h2.rent-box__title Would you like to read this book?
                 p.rent-box__text For only 10$ you can rent that book for a month!
-                button.rent-box__btn.btn-special-animation Rent a book!
+
+                if user
+                    button.rent-box__btn.btn-special-animation#rent-book(data-book-id=`${book.id}`) Rent a book!
+                else
+                    a.rent-box__btn.btn-special-animation(href='/login') Log in to rent book!
+    script(src="/js/stripe.js")

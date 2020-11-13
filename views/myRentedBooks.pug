@@ -1,0 +1,25 @@
+extends base
+
+block content
+    section.setting
+        .wrapper
+            .setting-box
+                .setting__menu
+                    a(href='/me')
+                        i.fas.fa-user-cog
+                    a(href='/my-books')
+                        i.fas.fa-book
+                    a(href='/my-reviews')
+                        i.far.fa-comment-dots
+                    - if(user.role === 'admin')
+                        a(href='#')
+                            i.far.fa-plus-square
+                h2.setting-title My rented Books
+                .setting__mybooks
+                    .setting__mybooks-card
+                        .setting__mybooks-card-img
+                            h3.setting__mybooks-card-img-title The taking of Anie Thorne
+                            a.setting__mybooks-card-img-info(href="#")
+                                | To Book
+
+    script(src='/js/updateSettings.js')
