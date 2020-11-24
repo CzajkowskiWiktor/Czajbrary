@@ -141,6 +141,18 @@
         .wrapper {
             width: 70%;
         }
+
+        &__reviewForm {
+            &-box {
+                width: 60%;
+
+                .form__group {
+                    &-btn {
+                        width: 30%;
+                    }
+                }
+            }
+        }
     }
 
     .rent {
@@ -228,6 +240,68 @@
                 min-width: 30%;
                 font-size: 1.6rem;
             }
+        }
+
+        &__addBook {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            // visibility: hidden;
+
+
+            .form-box {
+                flex-wrap: wrap;
+                width: 50%;
+
+                top: 0;
+                left: 0;
+                transform: translate(0);
+
+                input {
+                    width: 90%;
+                }
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+
+
+                &:nth-child(7) {
+                    width: 100%;
+                    padding: 0 1em;
+                }
+
+
+                &__description {
+                    font-size: 2rem;
+                    min-height: 8em;
+                    max-height: 20em;
+                }
+            }
+
+            .control-buttons {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .send {
+                width: 150px;
+                font-size: 1.7rem;
+                margin-right: 1em;
+            }
+
+            .popup {
+                width: 500px;
+                height: 150px;
+            }
+
+            .show-popup {
+                top: 50%;
+            }
+
+
+            // }
         }
     }
 

@@ -8,7 +8,7 @@ a.logo(href='/')
 nav.nav.nav-mobile
     if user
         .nav.nav--user
-            a.nav__el(href='.#') My books
+            a.nav__el(href='/my-books') My books
             a.nav__el(href='/me')
                 img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
                 span  My profile
@@ -25,7 +25,7 @@ nav.nav.nav-desktop
     a.nav__logo(href='/'): i.fab.fa-dropbox
     if user
         .nav.nav--user
-            a.nav__el(href='#') My books
+            a.nav__el(href='/my-books') My books
             a.nav__el(href='/me')
                 img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
                 span  My profile

@@ -20,22 +20,22 @@ block content
                     ul
                         li
                             i.far.fa-user
-                            span= `Author: ${book.author}`
+                            span= ` Author: ${book.author}`
                         li
                             i.fas.fa-book
-                            span= `Genre: ${book.genre}`
+                            span= ` Genre: ${book.genre}`
                         li
                             i.far.fa-calendar-alt
-                            span= `Year of prod: ${book.year}`
+                            span= ` Year of prod: ${book.year}`
                         li
                             i.fas.fa-globe-europe
-                            span= `Language: ${book.language}`
+                            span= ` Language: ${book.language}`
                         li
                             i.far.fa-check-square
-                            span= `Read: ${book.read}`
+                            span= ` Read: ${book.read}`
                         li
                             i.far.fa-star
-                            span= `Rating: ${book.ratingsAverage}`
+                            span= ` Rating: ${book.ratingsAverage}`
                 .book-description__box-desc.book-description__box-desc--right
                     h3.book__title Description
                     p.book__desc= book.description
@@ -46,6 +46,23 @@ block content
             .reviews__boxes
                 each review in book.reviews
                     +reviewCard(review)
+            if user
+                .book-reviews__addReview
+                    button.book-reviews__addReview-btn.btn-special-animation Add review
+                .book-reviews__reviewForm
+                    .book-reviews__reviewForm-box
+                        .close +
+                        .form__group
+                            label.form__group-label(for='review') Review
+                            input#review(type='text', placeholder='Enter your review', class='form__group-input', required, minlength='5')
+                        .form__group
+                            label.form__group-label(for='rating') Rating
+                            input#rating(type='number', placeholder='Rate between 1-5', class='form__group-input', required, minlength='1', min='1' max='5')
+                        .form__group
+                            button.form__group-btn.btn-special-animation(data-book-id=`${book.id}`) Submit
+                        .popup
+                            p.popup__text You have just add a Review successfully!
+                            button.close-btn.btn-special-animation Close
 
     section.rent
         .white-block.white-block-left

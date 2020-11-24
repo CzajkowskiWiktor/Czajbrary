@@ -31,15 +31,16 @@ const bookSchema = new mongoose.Schema({
         },
         read: {
             type: String,
+            required: [true, 'Do you read a book?'],
             enum: {
                 values: ['yes', 'no'],
                 message: 'Do you read? YES or NO'
             }
-            // required: [true, 'Do you read a book?']
         },
         imageCover: {
             type: String,
-            required: [true, 'A book need a cover image']
+            // required: [true, 'A book need a cover image'],
+            default: 'default-imageCover.jpg'
         },
         description: {
             type: String,

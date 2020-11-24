@@ -395,11 +395,6 @@ body {
             padding: 2em;
             height: 100%;
             border-radius: 10px;
-            // background-image: $light-blue-gradient, url('./../img/ttoat.jpg');
-            // background-size: 350px 450px;
-            // // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: top;
             transition: transform 1s, opacity 1s;
             overflow: hidden;
             // z-index: 1;
@@ -867,6 +862,162 @@ body {
         }
     }
 
+    &__addReview {
+        display: flex;
+        justify-content: flex-end;
+
+        &-btn {
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border-radius: 10px;
+            width: 200px;
+            border: none;
+            background-color: $white;
+            color: $darker;
+            font-size: 1.6rem;
+            text-decoration: none;
+            cursor: pointer;
+
+            &::before {
+                background-color: rgb(173, 173, 173);
+            }
+        }
+    }
+
+    &__reviewForm {
+        // position: absolute;
+        // background-color: #fff;
+        // color: $darker;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        &-box {
+            position: relative;
+            height: 300px;
+            width: 90%;
+            background-color: $white;
+            color: $darker;
+            text-align: center;
+            border-radius: 8px;
+
+            .close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 4rem;
+                padding: 0.1em 0.5em;
+                color: $main-color;
+                transform: rotate(45deg);
+                cursor: pointer;
+                transition: color .3s;
+
+                &:hover {
+                  color: $dark;
+                }
+            }
+
+            .form__group {
+                margin: 2em;
+
+                &-label {
+                    font-size: 2rem;
+                    color: $main-color;
+                    font-weight: bold;
+                }
+
+                &-input {
+                    display: block;
+                    margin-top: 0.7em;
+                    margin-bottom: 0.5em;
+                    width: 100%;
+                    padding: 0.6em;
+                    border: 1px solid gray;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &-btn {
+                    margin-top: 0.5em;
+                    margin-bottom: 1em;
+                    padding: 0.5em;
+                    border-radius: 10px;
+                    width: 60%;
+                    border: none;
+                    background-color: $main-color;
+                    color: $white;
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &::before {
+                        background-color: rgb(0, 17, 255);
+                    }
+                }
+            }
+
+            .close-btn {
+                padding: 0.7em 0;
+                margin-left: 1em;
+                width: 100px;
+                font-size: 1.6rem;
+                margin: 1em 0;
+                background-color: $main-color;
+                color: $white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .close-btn::before {
+                background-color: rgb(22, 45, 253);
+            }
+
+            .popup {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                top: -700px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                height: 200px;
+                background-color: $white;
+                border-radius: 8px;
+                border: 2px solid black;
+                transition: top .5s;
+            }
+
+            p {
+                font-size: 2rem;
+                padding: 0.5em;
+                text-align: center;
+            }
+
+            .close-btn {
+                margin-top: 20px;
+            }
+
+            .show-popup {
+                top: 50%;
+            }
+        }
+    }
+
 }
 
 //renting a book
@@ -931,6 +1082,7 @@ body {
     }
 }
 
+//settings
 .setting {
     position: relative;
     min-height: 100vh;
@@ -1074,6 +1226,54 @@ body {
                 background-color: rgb(0, 0, 0);
             }
         }
+
+        .close-btn--sett {
+            padding: 0.7em 0;
+            margin-left: 1em;
+            width: 100px;
+            font-size: 1.6rem;
+            margin: 1em 0;
+            background-color: $dark;
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .close-btn--sett::before {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .popup-sett {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: -1400px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 200px;
+            background-color: $white;
+            border-radius: 8px;
+            border: 2px solid black;
+            transition: top .5s;
+        }
+
+        p {
+            font-size: 2rem;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .close-btn--sett {
+            margin-top: 20px;
+        }
+
+        .show-popup {
+            top: 50%;
+        }
     }
 
     &__passwordChange {
@@ -1134,7 +1334,103 @@ body {
                 background-color: rgb(0, 0, 0);
             }
         }
+
+        .close-btn--pass {
+            padding: 0.7em 0;
+            margin-left: 1em;
+            width: 100px;
+            font-size: 1.6rem;
+            margin: 1em 0;
+            background-color: $dark;
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .close-btn--pass::before {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .popup-pass {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: -1000px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 200px;
+            background-color: $white;
+            border-radius: 8px;
+            border: 2px solid black;
+            transition: top .3s;
+        }
+
+        p {
+            font-size: 2rem;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .close-btn--pass {
+            margin-top: 20px;
+        }
+
+        .show-popup {
+            top: 50%;
+        }
     }
+
+    // .close-btn {
+    //     padding: 0.7em 0;
+    //     margin-left: 1em;
+    //     width: 100px;
+    //     font-size: 1.6rem;
+    //     margin: 1em 0;
+    //     background-color: $dark;
+    //     color: $white;
+    //     border: none;
+    //     border-radius: 8px;
+    //     cursor: pointer;
+    // }
+
+    // .close-btn::before {
+    //     background-color: rgb(0, 0, 0);
+    // }
+
+    // .popup-sett {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     position: absolute;
+    //     top: -1400px;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 90%;
+    //     height: 200px;
+    //     background-color: $white;
+    //     border-radius: 8px;
+    //     border: 2px solid black;
+    //     transition: top .5s;
+    // }
+
+    // p {
+    //     font-size: 2rem;
+    //     padding: 0.5em;
+    //     text-align: center;
+    // }
+
+    // .close-btn {
+    //     margin-top: 20px;
+    // }
+
+    // .show-popup {
+    //     top: 50%;
+    // }
 
     &-title {
         text-align: center;
@@ -1145,18 +1441,18 @@ body {
     &__mybooks {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        // align-items: flex-start;
         flex-wrap: wrap;
         min-height: 600px;
 
         &-card {
-            // position: relative;
-            // top: 0;
-            // left: 0;
-            margin: 2em;
-            height: 400px;
-            min-width: 250px;
-            box-shadow: 0 0 10px $darker;
+            position: relative;
+            margin: 1em 0;
+            padding: 1em;
+            height: 450px;
+            width: 350px;
+            color: $white;
+            text-align: center;
             transition: transform .3s;
 
             &:hover {
@@ -1165,20 +1461,44 @@ body {
 
             &-img {
                 position: relative;
+                padding: 2em;
                 height: 100%;
-                width: 100%;
-                background-image:$light-blue-gradient, url('./../img/ttoat.jpg');
-                background-position: center;
-                background-size: cover;
-                color: $white;
-                text-align: center;
+                border-radius: 10px;
+                transition: transform 1s, opacity 1s;
+                overflow: hidden;
 
-                &-title {
+                &-picture {
                     position: absolute;
-                    top: 2em;
-                    font-size: 2rem;
-                    // font-size: 5rem;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    width: 350px;
+                    height: 450px;
+                    // overflow: hidden;
                 }
+
+                &-shadow {
+                    position: absolute;
+                    background-color: rgba(0,0,0,.3);
+                    width: 350px;
+                    height: 450px;
+                    top: 0;
+                    left: 0;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    z-index: 2;
+                }
+
+                // &-title {
+                //     position: absolute;
+                //     top: 2em;
+                //     color: $white;
+                //     font-size: 2rem;
+                //     // z-index: 4;
+                //     // font-size: 5rem;
+                // }
 
                 &-info{
                     position: absolute;
@@ -1195,6 +1515,227 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    &__reviews {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+        padding: 4em 1em;
+        border: none;
+        // background-color: $dark;
+
+        .reviews {
+            &__box {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 5em;
+                max-width: 500px;
+                padding: 2em;
+                border-radius: 10px;
+                background-color: $white;
+                box-shadow: 0 0 10px $darker;
+                transition: transform .3s;
+
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            &__box-img {
+                position: absolute;
+                top: 8%;
+                left: 75%;
+                transform: translate(-50%, -50%);
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            &__box-quote {
+                margin-bottom: 1em;
+                font-size: 3rem;
+                color: $main-color;
+            }
+
+            &__box-text {
+                margin-bottom: 1em;
+                font-size: 1.4rem;
+                color: $dark;
+            }
+
+            // &__box-title {
+            //     margin-bottom: 0.5em;
+            //     font-size: 1.4rem;
+            //     color: $dark;
+            //     font-weight: bold;
+            // }
+
+            &__rating {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                font-size: 0.5rem;
+                margin-top: 2em;
+            }
+
+            &__star {
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-right: 0.5em;
+            }
+
+            &__star--active {
+                fill: $main-color;
+            }
+
+            &__star--inactive {
+                fill: #bbb;
+            }
+        }
+
+    }
+
+    &__addBook {
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .form-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 90%;
+            margin-bottom: 0.5em;
+
+            label {
+                display: inline-block;
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin-bottom: 0.2em;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.6em;
+                font-size: 1.6rem;
+                border: 1px solid rgb(197, 197, 197);
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            &__form__upload {
+                border: none;
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 0.5em;
+            }
+
+            &__description {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 5em;
+                max-height: 15em;
+            }
+
+            // &__form__upload {
+            //     color: #fa2904;
+            //     border: none;
+            //     background-color: $main-color;
+            // }
+
+            .error input {
+                border: 1px solid rgb(0, 137, 250);
+                background-color: rgba(0, 137, 250, .1);
+            }
+
+            .error-text {
+                margin: 5px 0 0 10px;
+                font-size: 1.4rem;
+                color: $main-color;
+                visibility: hidden;
+            }
+        }
+
+        .error {
+            .error-text {
+                visibility: visible;
+            }
+        }
+
+        .control-buttons {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .send,
+        .close {
+            padding: 0.7em 0;
+            margin-left: 1em;
+            width: 100px;
+            font-size: 1.6rem;
+            margin: 1em 0;
+            background-color: $main-color;
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .send::before,
+        .close::before {
+            background-color: rgb(22, 45, 253);
+        }
+
+        .popup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: -700px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 200px;
+            background-color: $white;
+            border-radius: 8px;
+            border: 2px solid black;
+            transition: top .5s;
+        }
+
+        .popup p {
+            font-size: 2rem;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .popup .close {
+            margin-top: 20px;
+        }
+
+        .show-popup {
+            top: 70%;
         }
     }
 }

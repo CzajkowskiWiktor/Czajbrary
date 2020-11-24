@@ -12,7 +12,7 @@ block content
                     a(href='/my-reviews')
                         i.far.fa-comment-dots
                     - if(user.role === 'admin')
-                        a(href='#')
+                        a(href='/add-book')
                             i.far.fa-plus-square
                 .setting__account
                     //- Without API
@@ -30,6 +30,9 @@ block content
                             input.form__upload(type='file', accept='image/*', id='photo', name='photo')
                             label(for='photo') Choose new photo
                         button.saveSett.btn-special-animation Save settings
+                        .popup-sett
+                            p.popup__text--sett Account settings updated successfully!
+                            button.close-btn--sett.btn-special-animation Close
                 .setting__passwordChange
                     form.form-passwordChange
                         h2.setting__passwordChange-title Change Password
@@ -43,4 +46,10 @@ block content
                             label(for='password-confirm') Confirm Password
                             input(type='password', id='password-confirm', placeholder='Confirm new password', minlength=8)
                         button.savePass.btn-special-animation Save password
+                        .popup-pass
+                            p.popup__text--pass Account password updated successfully!
+                            button.close-btn--pass.btn-special-animation Close
+                //- .popup-sett
+                //-     p.popup__text Account settings updated successfully!
+                //-     button.close-btn.btn-special-animation Close
     script(src='/js/updateSettings.js')

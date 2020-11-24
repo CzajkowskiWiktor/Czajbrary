@@ -1,6 +1,7 @@
 const express = require('express');
 const userController = require('./../controllers/userController');
 const authController = require('./../controllers/authController');
+// const bookController = require('./../controllers/bookController');
 
 
 
@@ -22,6 +23,8 @@ router.delete('/deleteMe', userController.deleteMe);
 
 //only admin can access to the routes
 router.use(authController.restrictTo('admin'));
+
+// router.post('/add-book', bookController.uploadBookPhoto, bookController.resizeBookPhoto, bookController.createBook);
 
 router.route('/')
     .get(userController.getAllUsers)

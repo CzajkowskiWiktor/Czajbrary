@@ -1,0 +1,59 @@
+extends base
+
+block content
+    section.setting
+            .wrapper
+                .setting-box
+                    .setting__menu
+                        a(href='/me')
+                            i.fas.fa-user-cog
+                        a(href='/my-books')
+                            i.fas.fa-book
+                        a(href='/my-reviews')
+                            i.far.fa-comment-dots
+                        - if(user.role === 'admin')
+                            a(href='#')
+                                i.far.fa-plus-square
+                    h2.setting-title Add a new book
+                    form.form-createBook
+                        .setting__addBook
+                            .form-box
+                                label(for='title') Book Title
+                                input#title(type='text' placeholder='Enter book title')
+                                p.error-text error
+                            .form-box
+                                label(for='author') Book Author
+                                input#author(type='text' placeholder='Enter book author')
+                                p.error-text error
+                            .form-box
+                                label(for='genre') Book genre
+                                input#genre(type='text' placeholder='Enter book genre')
+                                p.error-text error
+                            .form-box
+                                label(for='language') Book language
+                                input#language(type='text' placeholder='Enter book language')
+                                p.error-text error
+                            .form-box
+                                label(for='year') Book year
+                                input#year(type='number' placeholder='Enter book year')
+                                p.error-text error
+                            .form-box
+                                label(for='read') Book read
+                                input#read(type='text' placeholder='Did you read a book?')
+                                p.error-text error
+                            .form-box
+                                label(for='description') Book description
+                                textarea#description.form-box__description
+                                p.error-text error
+                            .form-box
+                                label Book image
+                                //- img(src="./../dev-data/img/default.jpg" alt="user picuter")
+                                input.form-box__form__upload(type='file', accept='image/*', id='imageCover', name='imageCover')
+                                label(for='imageCover')
+                                p.error-text error
+                            .control-buttons
+                                button.send.addBook.btn-special-animation Add book
+                            .popup
+                                p.popup__text You have just add a new Book successfully!
+                                button.close.btn-special-animation Close
+    script(src='/js/addBook.js')

@@ -47,12 +47,5 @@
         "rating": 4,
         "user": "5c8a1dfa2f8fb814b56fa181",
         "book": "5c88fa8cf4afda39709c9805"
-    },
-    {
-        "_id": "5c8a1d5b0190b214360da008",
-        "review": "Ta ksiazka byla bardzo dobra, Momentami dalo sie odczuc strach. Z przyjemnoscia sie ja czytalo.",
-        "rating": 5,
-        "user": "5c8a1dfa2f8fb814b56fa181",
-        "book": "5c88fa8cf4afda39709c9806"
     }
 ]

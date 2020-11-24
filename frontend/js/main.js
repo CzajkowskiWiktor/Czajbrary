@@ -38,7 +38,7 @@ logoBtn.addEventListener('click', () => {
 });
 
 if(document.querySelector('.logoutBtn')) {
-    console.log('zalogowany');
+    // console.log('zalogowany');
     const logoutBtn = document.querySelector('.nav__el--logout');
     const logoutBtnDesktop = document.querySelector('.nav__el--logout-desktop');
 
@@ -61,6 +61,67 @@ if(document.querySelector('.logoutBtn')) {
     logoutBtn.addEventListener('click', logout);
     logoutBtnDesktop.addEventListener('click', logout);
 };
+
+const createReview = async (bookId, review, rating) => {
+    try {
+        const book = bookId;
+        const url = 'http://127.0.0.1:4000/api/v1/reviews';
+        const res = await axios({
+            method: 'POST',
+            url,
+            data: {
+                review,
+                rating,
+                book
+            }
+        });
+
+        if(res.data.status === 'success') {
+            const popup = document.querySelector('.popup');
+            const closeBtn = document.querySelector('.close-btn');
+            popup.classList.add('show-popup');
+            window.setTimeout(() => {
+                location.reload();
+            }, 2000);
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show-popup');
+                location.reload();
+            });
+        }
+    } catch (err) {
+        const popup = document.querySelector('.popup');
+        const closeBtn = document.querySelector('.close-btn');
+        const popupText = document.querySelector('.popup__text');
+        popupText.innerHTML = err.response.data.message;
+        popup.classList.add('show-popup');
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('show-popup');
+            location.reload();
+        });
+    }
+};
+
+if(document.querySelector('.book-reviews__addReview-btn')) {
+    const addReviewBtn = document.querySelector('.book-reviews__addReview-btn');
+    const closeReviewBtn = document.querySelector('.close');
+    const saveReviewBtn = document.querySelector('.form__group-btn');
+
+    addReviewBtn.addEventListener('click', () => {
+        document.querySelector('.book-reviews__reviewForm').style.display='flex';
+    });
+
+    closeReviewBtn.addEventListener('click', () => {
+        document.querySelector('.book-reviews__reviewForm').style.display='none';
+    });
+
+    saveReviewBtn.addEventListener('click', async e => {
+        const review = document.getElementById('review').value;
+        const rating = document.getElementById('rating').value;
+        const bookId = e.target.dataset.bookId;
+        await createReview(bookId, review, rating);
+        // document.querySelector('.book-reviews__reviewForm').style.display='none';
+    });
+}
 
 
 

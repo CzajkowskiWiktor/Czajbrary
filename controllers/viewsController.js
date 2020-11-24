@@ -1,6 +1,7 @@
 const Book = require('./../models/bookModel');
 const User = require('./../models/userModel');
-const Renting = require('./../models/bookModel');
+const Review = require('./../models/reviewModel');
+const Renting = require('./../models/bookingModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 
@@ -57,26 +58,36 @@ exports.getMyBooks = catchAsync(async (req, res, next) => {
     const bookIDs = rentings.map(el => el.book);
     const books = await Book.find({ _id: { $in: bookIDs } });
 
+    // console.log(books);
+
     res.status(200).render('myRentedBooks', {
         title: 'My rented books',
         books
     });
 });
 
-//TODO reviews on account
+//reviews on account
 exports.getMyReviews = catchAsync(async (req, res, next) => {
-    //finding all bookings
-    const rentings = await Renting.find({user: req.user.id});
+    //finding all reviews
+    const reviews = await Review.find({user: req.user.id});
+
+    // console.log(reviews);
 
     //finding books with the returned ID
-    const bookIDs = rentings.map(el => el.book);
-    const books = await Book.find({ _id: { $in: bookIDs } });
+    // const bookIDs = reviews.map(el => el.book);
+    // const books = await Book.find({ _id: { $in: bookIDs } });
 
-    res.status(200).render('myRentedBooks', {
-        title: 'My rented books',
-        books
+    res.status(200).render('myReviews', {
+        title: 'My reviews',
+        reviews
     });
 });
+
+exports.addNewBook = (req, res) => {
+    res.status(200).render('createBook', {
+        title: 'Add new Book'
+    });
+};
 
 exports.updateUserData = catchAsync(async (req, res) => {
     console.log('UPDATING USER', req.body);

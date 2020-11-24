@@ -15,11 +15,47 @@ const updateSettings = async (data, type) => {
         });
 
         if(res.data.status === 'success') {
-            alert(`${type.toUpperCase()} updated successfully`)
+            const popupSett = document.querySelector('.popup-sett');
+            const closeBtnSett = document.querySelector('.close-btn--sett');
+            const popupTextSett = document.querySelector('.popup__text--sett');
+            const popupPass = document.querySelector('.popup-pass');
+            const closeBtnPass = document.querySelector('.close-btn--pass');
+            const popupTextPass = document.querySelector('.popup__text--pass');
+
+            if (type === 'data') {
+                popupSett.classList.add('show-popup');
+                popupTextSett.innerHTML = `${type.toUpperCase()} updated successfully`;
+            } else {
+                popupPass.classList.add('show-popup');
+                popupTextPass.innerHTML = `${type.toUpperCase()} updated successfully`;
+            }
+            // popupText.innerHTML = `${type.toUpperCase()} updated successfully`;
+            window.setTimeout(() => {
+                location.reload();
+            }, 2000);
+
+            closeBtnSett.addEventListener('click', () => {
+                popupSett.classList.remove('show-popup');
+                location.reload();
+            });
+            closeBtnPass.addEventListener('click', () => {
+                popupPass.classList.remove('show-popup');
+                location.reload();
+            });
+            // alert(`${type.toUpperCase()} updated successfully`)
         }
 
     } catch (err) {
-        alert(err.response.data.message);
+        // alert(err.response.data.message);
+        const popup = document.querySelector('.popup-sett');
+        const closeBtn = document.querySelector('.close-btn');
+        const popupText = document.querySelector('.popup__text');
+        popupText.innerHTML = err.response.data.message;
+        popup.classList.add('show-popup');
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('show-popup');
+            location.reload();
+        });
     }
 }
 

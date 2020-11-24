@@ -1048,6 +1048,177 @@ body {
   fill: #bbb;
 }
 
+.book-reviews__addReview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.book-reviews__addReview-btn {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 200px;
+  border: none;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.book-reviews__addReview-btn::before {
+  background-color: #adadad;
+}
+
+.book-reviews__reviewForm {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book-reviews__reviewForm-box {
+  position: relative;
+  height: 300px;
+  width: 90%;
+  background-color: #fff;
+  color: #1a1a1a;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.book-reviews__reviewForm-box .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 4rem;
+  padding: 0.1em 0.5em;
+  color: #1755e7;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.book-reviews__reviewForm-box .close:hover {
+  color: #232323;
+}
+
+.book-reviews__reviewForm-box .form__group {
+  margin: 2em;
+}
+
+.book-reviews__reviewForm-box .form__group-label {
+  font-size: 2rem;
+  color: #1755e7;
+  font-weight: bold;
+}
+
+.book-reviews__reviewForm-box .form__group-input {
+  display: block;
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid gray;
+}
+
+.book-reviews__reviewForm-box .form__group-input:focus {
+  outline: none;
+}
+
+.book-reviews__reviewForm-box .form__group-btn {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 60%;
+  border: none;
+  background-color: #1755e7;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.book-reviews__reviewForm-box .form__group-btn::before {
+  background-color: #0011ff;
+}
+
+.book-reviews__reviewForm-box .close-btn {
+  padding: 0.7em 0;
+  margin-left: 1em;
+  width: 100px;
+  font-size: 1.6rem;
+  margin: 1em 0;
+  background-color: #1755e7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.book-reviews__reviewForm-box .close-btn::before {
+  background-color: #162dfd;
+}
+
+.book-reviews__reviewForm-box .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: -700px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid black;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.book-reviews__reviewForm-box p {
+  font-size: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.book-reviews__reviewForm-box .close-btn {
+  margin-top: 20px;
+}
+
+.book-reviews__reviewForm-box .show-popup {
+  top: 50%;
+}
+
 .rent {
   position: relative;
   display: -webkit-box;
@@ -1288,6 +1459,65 @@ body {
   background-color: black;
 }
 
+.setting__account .close-btn--sett {
+  padding: 0.7em 0;
+  margin-left: 1em;
+  width: 100px;
+  font-size: 1.6rem;
+  margin: 1em 0;
+  background-color: #232323;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.setting__account .close-btn--sett::before {
+  background-color: black;
+}
+
+.setting__account .popup-sett {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: -1400px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid black;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.setting__account p {
+  font-size: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.setting__account .close-btn--sett {
+  margin-top: 20px;
+}
+
+.setting__account .show-popup {
+  top: 50%;
+}
+
 .setting__passwordChange {
   position: relative;
   display: -webkit-box;
@@ -1358,6 +1588,65 @@ body {
   background-color: black;
 }
 
+.setting__passwordChange .close-btn--pass {
+  padding: 0.7em 0;
+  margin-left: 1em;
+  width: 100px;
+  font-size: 1.6rem;
+  margin: 1em 0;
+  background-color: #232323;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.setting__passwordChange .close-btn--pass::before {
+  background-color: black;
+}
+
+.setting__passwordChange .popup-pass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid black;
+  -webkit-transition: top .3s;
+  transition: top .3s;
+}
+
+.setting__passwordChange p {
+  font-size: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.setting__passwordChange .close-btn--pass {
+  margin-top: 20px;
+}
+
+.setting__passwordChange .show-popup {
+  top: 50%;
+}
+
 .setting-title {
   text-align: center;
   margin: 1em;
@@ -1371,20 +1660,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 600px;
 }
 
 .setting__mybooks-card {
-  margin: 2em;
-  height: 400px;
-  min-width: 250px;
-  -webkit-box-shadow: 0 0 10px #1a1a1a;
-          box-shadow: 0 0 10px #1a1a1a;
+  position: relative;
+  margin: 1em 0;
+  padding: 1em;
+  height: 450px;
+  width: 350px;
+  color: #fff;
+  text-align: center;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -1398,19 +1686,37 @@ body {
 
 .setting__mybooks-card-img {
   position: relative;
+  padding: 2em;
   height: 100%;
-  width: 100%;
-  background-image: linear-gradient(45deg, black 0%, rgba(0, 0, 0, 0.349877) 100%, #001eff 100%), url("./../img/ttoat.jpg");
-  background-position: center;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  overflow: hidden;
 }
 
-.setting__mybooks-card-img-title {
+.setting__mybooks-card-img-picture {
   position: absolute;
-  top: 2em;
-  font-size: 2rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  width: 350px;
+  height: 450px;
+}
+
+.setting__mybooks-card-img-shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 450px;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .setting__mybooks-card-img-info {
@@ -1426,6 +1732,270 @@ body {
 
 .setting__mybooks-card-img-info:visited {
   color: #fff;
+}
+
+.setting__reviews {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 40vh;
+  padding: 4em 1em;
+  border: none;
+}
+
+.setting__reviews .reviews__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5em;
+  max-width: 500px;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px #1a1a1a;
+          box-shadow: 0 0 10px #1a1a1a;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.setting__reviews .reviews__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.setting__reviews .reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.setting__reviews .reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.setting__reviews .reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #1755e7;
+}
+
+.setting__reviews .reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: #232323;
+}
+
+.setting__reviews .reviews__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0.5rem;
+  margin-top: 2em;
+}
+
+.setting__reviews .reviews__star {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5em;
+}
+
+.setting__reviews .reviews__star--active {
+  fill: #1755e7;
+}
+
+.setting__reviews .reviews__star--inactive {
+  fill: #bbb;
+}
+
+.setting__addBook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.setting__addBook .form-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 90%;
+  margin-bottom: 0.5em;
+}
+
+.setting__addBook .form-box label {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.setting__addBook .form-box input {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1.6rem;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.setting__addBook .form-box__form__upload {
+  border: none;
+}
+
+.setting__addBook .form-box img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0.5em;
+}
+
+.setting__addBook .form-box__description {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 5em;
+  max-height: 15em;
+}
+
+.setting__addBook .form-box .error input {
+  border: 1px solid #0089fa;
+  background-color: rgba(0, 137, 250, 0.1);
+}
+
+.setting__addBook .form-box .error-text {
+  margin: 5px 0 0 10px;
+  font-size: 1.4rem;
+  color: #1755e7;
+  visibility: hidden;
+}
+
+.setting__addBook .error .error-text {
+  visibility: visible;
+}
+
+.setting__addBook .control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.setting__addBook .send,
+.setting__addBook .close {
+  padding: 0.7em 0;
+  margin-left: 1em;
+  width: 100px;
+  font-size: 1.6rem;
+  margin: 1em 0;
+  background-color: #1755e7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.setting__addBook .send::before,
+.setting__addBook .close::before {
+  background-color: #162dfd;
+}
+
+.setting__addBook .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: -700px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid black;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.setting__addBook .popup p {
+  font-size: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.setting__addBook .popup .close {
+  margin-top: 20px;
+}
+
+.setting__addBook .show-popup {
+  top: 70%;
 }
 
 .err {
@@ -1599,6 +2169,12 @@ body {
   .book-reviews .wrapper {
     width: 70%;
   }
+  .book-reviews__reviewForm-box {
+    width: 60%;
+  }
+  .book-reviews__reviewForm-box .form__group-btn {
+    width: 30%;
+  }
   .rent-box__title {
     font-size: 2.6rem;
   }
@@ -1666,6 +2242,62 @@ body {
   .setting__passwordChange .savePass {
     min-width: 30%;
     font-size: 1.6rem;
+  }
+  .setting__addBook {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .setting__addBook .form-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 50%;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .setting__addBook .form-box input {
+    width: 90%;
+  }
+  .setting__addBook .form-box img {
+    width: 250px;
+    height: 250px;
+  }
+  .setting__addBook .form-box:nth-child(7) {
+    width: 100%;
+    padding: 0 1em;
+  }
+  .setting__addBook .form-box__description {
+    font-size: 2rem;
+    min-height: 8em;
+    max-height: 20em;
+  }
+  .setting__addBook .control-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .setting__addBook .send {
+    width: 150px;
+    font-size: 1.7rem;
+    margin-right: 1em;
+  }
+  .setting__addBook .popup {
+    width: 500px;
+    height: 150px;
+  }
+  .setting__addBook .show-popup {
+    top: 50%;
   }
   .error-content__title {
     font-size: 3rem;
@@ -1762,8 +2394,23 @@ body {
   .book-description .book-box .book-description__box-desc .book__desc {
     padding: 0 4em;
   }
-  .book-reviews .wrapper {
-    width: 50%;
+  .book-reviews__heading {
+    font-size: 5.8rem;
+  }
+  .book-reviews .reviews__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .book-reviews .reviews__box {
+    width: 100%;
+    margin-right: 1em;
+    margin-left: 1em;
   }
   .rent {
     height: 20vh;
@@ -1772,10 +2419,10 @@ body {
     width: 50%;
   }
   .rent-box__title {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   .rent-box__text {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .rent-box__btn {
     min-width: 20%;
@@ -1795,14 +2442,14 @@ body {
     padding: 3em;
   }
   .rent-box__title {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   .rent-box__text {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .rent-box__btn {
     min-width: 20%;
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .setting-box {
     margin-top: 6em;
@@ -1826,6 +2473,33 @@ body {
   }
   .setting-title {
     font-size: 3.6rem;
+  }
+  .book-reviews .reviews__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .book-reviews .reviews__box {
+    width: 40%;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+  .book-reviews__reviewForm-box {
+    width: 40%;
+  }
+  .book-reviews__reviewForm-box .form__group-btn {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,14 +12,31 @@ block content
                     a(href='/my-reviews')
                         i.far.fa-comment-dots
                     - if(user.role === 'admin')
-                        a(href='#')
+                        a(href='/add-book')
                             i.far.fa-plus-square
                 h2.setting-title My rented Books
                 .setting__mybooks
-                    .setting__mybooks-card
-                        .setting__mybooks-card-img
-                            h3.setting__mybooks-card-img-title The taking of Anie Thorne
-                            a.setting__mybooks-card-img-info(href="#")
-                                | To Book
+                    each book in books
+                        .setting__mybooks-card
+                            .setting__mybooks-card-img
+                                .setting__mybooks-card-img-shadow
+                                img.setting__mybooks-card-img-picture(src=`/img/books/${book.imageCover}`, alt=`${book.title}`)
+                                //- h3.setting__mybooks-card-img-title= book.title
+                                a.setting__mybooks-card-img-info(href=`/book/${book.slug}`)
+                                        | To Book
+                    //- .setting__mybooks-card
+                    //-     .setting__mybooks-card-img
+                    //-         .setting__mybooks-card-img-shadow
+                    //-         img.books__card-img-picture(src='/img/books/book-1.jpg', alt='book1')
+                    //-         //- h3.setting__mybooks-card-img-title= book.title
+                    //-         a.setting__mybooks-card-img-info(href='#')
+                    //-                 | To Book
+                    //- .setting__mybooks-card
+                    //-     .setting__mybooks-card-img
+                    //-         .setting__mybooks-card-img-shadow
+                    //-         img.books__card-img-picture(src='/img/books/book-1.jpg', alt='book1')
+                    //-         //- h3.setting__mybooks-card-img-title= book.title
+                    //-         a.setting__mybooks-card-img-info(href='#')
+                    //-                 | To Book
 
-    script(src='/js/updateSettings.js')
+    //- script(src='/js/updateSettings.js')

@@ -1,0 +1,35 @@
+extends base
+
+include _reviewCard
+
+block content
+    section.setting
+        .wrapper
+            .setting-box
+                .setting__menu
+                    a(href='/me')
+                        i.fas.fa-user-cog
+                    a(href='/my-books')
+                        i.fas.fa-book
+                    a(href='#')
+                        i.far.fa-comment-dots
+                    - if(user.role === 'admin')
+                        a(href='/add-book')
+                            i.far.fa-plus-square
+                h2.setting-title My reviews
+                .setting__reviews
+                    each review in reviews
+                        .reviews__box
+                            .reviews__box-img
+                                img(src=`/img/users/${review.user.photo}`, alt=`${review.user.name}`)
+                            .reviews__box-info
+                                .reviews__box-quote
+                                    i.fas.fa-quote-right
+                                p.reviews__box-text= review.review
+                                strong= review.book.title
+                                //- strong= review.user.name
+                            .reviews__rating
+                                each star in [1, 2, 3, 4, 5]
+                                    svg.reviews__star(class=`reviews__star--${review.rating >= star ? 'active' : 'inactive'}`)
+                                        use(xlink:href='/img/icons.svg#icon-star')
+                    //- +reviewCard(review)

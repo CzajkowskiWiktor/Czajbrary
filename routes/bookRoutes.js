@@ -13,7 +13,7 @@ router.route('/top-5-english').get(bookController.aliasTopBooks, bookController.
 
 router.route('/')
     .get(bookController.getAllBooks)
-    .post(authController.protect, authController.restrictTo('admin'), bookController.createBook);
+    .post(authController.protect, authController.restrictTo('admin'), bookController.uploadBookPhoto, bookController.resizeBookPhoto, bookController.createNewBook);
 
 router.route('/:id')
     .get(bookController.getBook)

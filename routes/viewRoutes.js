@@ -12,6 +12,7 @@ router.get('/signup',authController.isLoggedIn, viewsController.getSignupForm);
 router.get('/me', authController.protect, viewsController.getAccount);
 router.get('/my-books', authController.protect, viewsController.getMyBooks);
 router.get('/my-reviews', authController.protect, viewsController.getMyReviews);
+router.get('/add-book', authController.protect, authController.restrictTo('admin'),viewsController.addNewBook);
 
 router.post('/submit-user-data', authController.protect, viewsController.updateUserData);
 
