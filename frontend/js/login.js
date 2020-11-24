@@ -62,14 +62,14 @@ const checkErrors = () => {
         login(email, password);
     }
 
-    console.log(errorCount);
+    //console.log(errorCount);
 };
 
 const login = async (email, password) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/users/login',
+            url: '/api/v1/users/login',
             data: {
                 email,
                 password
@@ -88,7 +88,7 @@ const login = async (email, password) => {
             });
         }
 
-        console.log(result);
+        //console.log(result);
     } catch (err) {
         popupText.innerHTML = err.response.data.message;
         popup.classList.add('show-popup');
@@ -103,7 +103,7 @@ const logout = async () => {
     try {
         const res = await axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/api/v1/users/logout'
+            url: '/api/v1/users/logout'
         })
         if (res.data.status === 'success') location.assign('/');
     } catch (err) {

@@ -77,14 +77,14 @@ const checkErrors = () => {
         // popup.classList.add('show-popup');
     }
 
-    console.log(errorCount);
+    //console.log(errorCount);
 }
 
 const signup = async (name, email, password, passwordConfirm) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/users/signup',
+            url: '/api/v1/users/signup',
             data: {
                 name,
                 email,
@@ -105,7 +105,7 @@ const signup = async (name, email, password, passwordConfirm) => {
             });
         }
 
-        console.log(result);
+        //console.log(result);
     } catch (err) {
         popupText.innerHTML = err.response.data.message;
         popup.classList.add('show-popup');

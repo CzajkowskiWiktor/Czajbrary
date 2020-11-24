@@ -61,8 +61,8 @@ reviewSchema.statics.calcAverageRatings = async function(bookId) {
             }
         }
     ]);
-    console.log(stats);
-    console.log(stats.length);
+    //console.log(stats);
+    //console.log(stats.length);
 
     if(stats.length > 0) {
         await Book.findByIdAndUpdate(bookId, {

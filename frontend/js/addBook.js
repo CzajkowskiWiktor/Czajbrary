@@ -56,31 +56,15 @@ const checkErrors = async () => {
         form.append('read', document.getElementById('read').value);
         form.append('description', document.getElementById('description').value);
         form.append('imageCover', document.getElementById('imageCover').files[0]);
-        // console.log(form);
         addNewBook(form);
-        // const title = document.getElementById('title').value;
-        // const author = document.getElementById('author').value;
-        // const genre = document.getElementById('genre').value;
-        // const language = document.getElementById('language').value;
-        // const year = document.getElementById('year').value;
-        // const read = document.getElementById('read').value;
-        // const description = document.getElementById('description').value;
-        // const imageCover = document.getElementById('photo').value;
-        // addNewBook(title, author, genre, language, year, read, description, imageCover);
-
-        console.log('nie ma bledow');
-
     }
-
-    console.log(errorCount);
 };
 
-// const addNewBook = async (title, author, genre, language, year, read, description, imageCover) => {
 const addNewBook = async (data) => {
     try {
         const res = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/books',
+            url: '/api/v1/books',
             data
             // data: {
             //     title,

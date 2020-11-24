@@ -49,7 +49,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 
     //Sending Email
     const url = `${req.protocol}://${req.get('host')}/me`;
-    console.log(url);
+    //console.log(url);
     await new Email(newUser, url).sendWelcome();
 
     createSendToken(newUser, 201, res);
@@ -176,7 +176,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     const user = await User.findOne({
       email: req.body.email
     });
-    console.log(user.email);
+    //console.log(user.email);
     if (!user) {
       return next(new AppError('There is no user with email address', 404));
     }

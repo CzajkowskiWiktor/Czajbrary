@@ -4,8 +4,8 @@ const rentBookBtn = document.getElementById('rent-book');
 const rentBook = async bookId => {
     try {
         //1) Get checkout session from endpoint/API
-        const session = await axios(`http://127.0.0.1:4000/api/v1/bookings/checkout-session/${bookId}`);
-        console.log(session);
+        const session = await axios(`/api/v1/bookings/checkout-session/${bookId}`);
+        //console.log(session);
         //2) create checkout form + charge credit card
         await stripe.redirectToCheckout({
             sessionId: session.data.session.id

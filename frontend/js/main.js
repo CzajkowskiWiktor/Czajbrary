@@ -47,7 +47,7 @@ if(document.querySelector('.logoutBtn')) {
         try {
             const res = await axios({
                 method: 'GET',
-                url: 'http://127.0.0.1:4000/api/v1/users/logout',
+                url: '/api/v1/users/logout',
             });
 
             if(res.data.status === 'success') {
@@ -65,7 +65,7 @@ if(document.querySelector('.logoutBtn')) {
 const createReview = async (bookId, review, rating) => {
     try {
         const book = bookId;
-        const url = 'http://127.0.0.1:4000/api/v1/reviews';
+        const url = '/api/v1/reviews';
         const res = await axios({
             method: 'POST',
             url,
