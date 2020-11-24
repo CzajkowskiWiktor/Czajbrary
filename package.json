@@ -4,7 +4,8 @@
   "description": "It's a page showing all my books and you will be able to rent a book",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./frontend/js/index.js --out-dir ./frontend/js --out-file bundle.js",
@@ -37,5 +38,8 @@
     "stripe": "^7.15.0",
     "validator": "^13.1.17",
     "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
