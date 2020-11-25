@@ -850,7 +850,7 @@ body {
 }
 
 .signup .form__box .show-popup {
-  top: 50px;
+  top: 50%;
 }
 
 .book-header {
