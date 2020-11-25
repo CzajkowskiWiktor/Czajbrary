@@ -20,14 +20,19 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
         cancel_url: `${req.protocol}://${req.get('host')}/book/${book.slug}`,
         customer_email: req.user.email,
         client_reference_id: req.params.bookId,
+        mode: 'payment',
         line_items: [
             {
-                name: `${book.title} Book`,
-                description: book.description,
-                images: [],
-                amount: book.price * 100,
-                currency: 'usd',
-                quantity: 1
+                quantity: 1,
+                price_data: {
+                    currency: 'usd',
+                    unit_amount: book.price * 100,
+                    product_data: {
+                        name: `${book.title} Book`,
+                        description: book.description,
+                        images: [`${req.protocol}://${req.get('host')}/img/books/${book.imageCover}`],
+                    }
+                }
             }
         ]
     });
@@ -51,7 +56,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 const createBookingCheckout = async session => {
     const book = session.client_reference_id;
     const user = (await User.findOne({email: session.customer_email})).id;
-    const price = session.line_items[0].amount / 100;
+    const price = session.amount_total / 100;
     await Renting.create({book, user, price});
 };
 
